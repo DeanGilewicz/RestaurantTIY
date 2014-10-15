@@ -2,8 +2,87 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+@import 'richard';
+@import 'dean';
+@import 'joanna';
+@import 'john';
+
 // Custom Styles
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+img {
+  max-width: 100%;
+}
+
+.container {
+  @include outer-container;
+  max-width: 960px;
+  overflow: auto;
+
+  .logo {
+    @include span-columns(3);
+    background-color: red;
+  }
+
+  .social {
+    @include span-columns(3);
+    @include shift(6);
+    @include omega();
+    background-color: blue;
+  }
+
+  .hero-image {
+    @include span-columns(12);
+  }
+
+  .middle-section {
+    @include span-columns(12);
+    @include omega(3n);
+
+    div {
+      height: 200px;
+      background-color: red;
+    }
+
+    .news {
+      @include span-columns(4 of 12);
+    }
+
+    .special {
+      @include span-columns(4 of 12);
+    }
+
+    .location {
+      @include span-columns(4 of 12);
+    }
+  }
+
+  .bottom {
+    @include span-columns(12);
+
+    div {
+      background-color: blue;
+    }
+
+    .tabs {
+      @include span-columns(9 of 12);
+
+      div {
+        background-color: red;
+        margin-bottom: 20px;
+      }
+    }
+
+    .photos {
+      @include span-columns(3 of 12);
+      @include omega();
+    }
+
+  }
+
+  .footer {
+    @include span-columns(12);
+  }
+}
 }
