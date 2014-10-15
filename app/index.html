@@ -65,14 +65,22 @@
           <div class="story open">
             Story
           </div>
+<!--html for main menu -->
           <div class="menu">
+            <h2>Our Dinner Selections...</h2>
+            <h3>Appetizers</h3>
             <div class="menu_apps">
             </div>
+
+            <h3>Entrees</h3>
             <div class="menu_entree">
             </div>
+
+            <h3>Sides A La Carte</h3>
             <div class="menu_sides">
             </div>
           </div>
+<!--End of menu section-->
           <div class="reservations">
             Reservations
           </div>
@@ -116,17 +124,14 @@
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
-      <div class="menu_section">
-            <h2></h2>
-            <div class="menu_topBox">
-              <h3><%= item %></h3>
+            <div class="menu_top">
+              <h4><%= item %></h4>
               <p><%= price %></p>
             </div>
 
-            <div class="bottomBox">
+            <div class="menu_bottom">
               <p><%=description %></p>
             </div>
-      </div>
     </script>
 
     <!-- build:js scripts/vendor.js -->
