@@ -1,0 +1,50 @@
+// LOCATION SECTION CONTAINER
+
+.location {
+  border: 1px solid HSLA(0, 0%, 70%, 1);
+  background-color: HSLA(0, 0%, 100%, 1);
+
+  h5 {
+    font-size: 1.4em;
+    margin: 2% 0% 2% 5%;
+  }
+
+  // GOOGLE MAP
+
+  .google {
+    margin: 2% 5%;
+    border: 1px solid HSLA(0, 0%, 70%, 1);
+  }
+
+  // CONTACT INFORMATION
+
+  .contact {
+    font-size: 1.3em;
+
+    address {
+      font-size: 1em;
+      text-align: center;;
+    }
+
+    ul {
+      overflow: auto;
+      padding-left: 0;
+    }
+
+    li {
+      float: left;
+      width: 24%;
+      text-align: center;
+      font-size: 0.8em;
+      list-style-type: none;
+      margin: 0% 4%;
+
+      &:nth-child(2) {
+        border-right: 1px solid HSLA(0, 0%, 70%, 1);
+        border-left: 1px solid HSLA(0, 0%, 70%, 1);
+      }
+    }
+  }
+}
+
+// END OF LOCATION LOCATION SECTION CONTAINER
