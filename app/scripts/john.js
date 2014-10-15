@@ -1,6 +1,6 @@
 
 
-var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=e1126579a99d5f23c6802a189f95b9dd3164669b434556d2&user_id=gt7348b&format=json';          // Flickr API
+var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + 'e1126579a99d5f23c6802a189f95b9dd' + '&user_id=56199382@N00&per_page=12&page=4&format=json';          // Flickr API
 var api_news = 'http://restaurantapi.apiary-mock.com/news/latest'; //news api
 
 var template_flickr ;//= $('').html();
@@ -25,7 +25,17 @@ var news_title,
 
 //This calls the Flickr API
 
-$.getJSON(api_flickr).done( function(flickr_data){
+$.getJSON(api_flickr).done( function(flick_data){
 
-    console.log(flickr_data);
-});
+    console.log(flick_data);
+
+    flick_data.forEach(function(photo_array){
+      photo_array.forEach(function(photo_data){
+
+      var photo_title = photo_data.title;
+
+      console.log(photo_title);
+    })
+})
+    console.log("hi");
+})
