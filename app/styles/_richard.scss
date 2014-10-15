@@ -1,0 +1,11 @@
+// Tab Functionality
+.tabs {
+
+  & > div {
+    display: none;
+  }
+
+  .open {
+    display: block;
+  }
+}
