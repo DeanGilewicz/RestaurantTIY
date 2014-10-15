@@ -45,7 +45,7 @@
       <!-- 3 MIDDLE BOXES -->
 
       <div class="middle-section">
-        <div class="news">News</div>
+        <div class="news">Latest News!</div>
         <div class="special">Special</div>
         <div class="location">Location</div>
       </div>
@@ -116,12 +116,14 @@
     <!-- This is the news script -->
 
     <script id='news_call' type='text/template'>
-          <li>
-             <%= news_title %>
-          </li>
-          <li>
-             <%= news_text %>
-          </li>
+          <div>
+            <li class='news_title'>
+               <%= news_title %>
+            </li>
+            <li class='news_text'>
+               <%= news_text %>
+            </li>
+          </div>
     </script>
 
 
