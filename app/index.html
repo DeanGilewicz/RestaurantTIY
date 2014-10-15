@@ -58,18 +58,23 @@
 
         <div class="tabs">
           <ul class="tab-header">
-            <li>Our Story</li>
-            <li>Menu</li>
-            <li>Reservations</li>
+            <li id="story">Our Story</li>
+            <li id="menu">Menu</li>
+            <li id="reservations">Reservations</li>
           </ul>
-          <div class="story">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a molestias aspernatur! Fugiat aut suscipit excepturi, blanditiis, maxime, sed ut nisi amet doloribus ab iure, facilis atque error. Distinctio, quae!
+          <div class="story open">
+            Story
           </div>
           <div class="menu">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sint hic quam repellendus quisquam, at nisi totam provident saepe earum eius, iste perferendis ad dolor accusamus molestias adipisci eveniet consectetur.
+            <div class="menu_apps">
+            </div>
+            <div class="menu_entree">
+            </div>
+            <div class="menu_sides">
+            </div>
           </div>
           <div class="reservations">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, maxime impedit. Exercitationem iste voluptates, ipsa voluptas quas sequi sint, molestiae velit distinctio autem harum iusto qui quisquam, sed rerum? Debitis.
+            Reservations
           </div>
         </div>
 
@@ -107,6 +112,7 @@
 
     </div> <!-- .container -->
 
+
     <!-- This is the news script -->
 
     <script id='news_call' type='text/template'>
@@ -116,6 +122,25 @@
           <li>
              <%= news_text %>
           </li>
+    </script>
+
+
+
+
+
+<!--Main menu template -->
+    <script id="template_menu" type="text/template">
+      <div class="menu_section">
+            <h2></h2>
+            <div class="menu_topBox">
+              <h3><%= item %></h3>
+              <p><%= price %></p>
+            </div>
+
+            <div class="bottomBox">
+              <p><%=description %></p>
+            </div>
+      </div>
     </script>
 
 

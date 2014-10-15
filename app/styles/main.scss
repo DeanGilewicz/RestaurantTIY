@@ -10,8 +10,6 @@
 // Custom Styles
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-}
 
 img {
   max-width: 100%;
@@ -86,4 +84,5 @@ img {
   .footer {
     @include span-columns(12);
   }
+}
 }
