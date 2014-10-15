@@ -3,6 +3,7 @@ var api_menu = 'http://restaurantapi.apiary-mock.com/menu';
 var api_special = 'http://restaurantapi.apiary-mock.com/menu/special';
 
 
+
 //Main menu jquery for template
 var template_menu= $('#template_menu').html();
 var render_menu = _.template(template_menu);
@@ -23,9 +24,11 @@ $.getJSON(api_menu).done( function(menu_data){
     })
 });
 
+
 // Specials section
 //var template_special= $('').html();
 //var render_special = _.template(template_special);*/
+
 
 // Tab Functionality
 $('#story').click(function(){

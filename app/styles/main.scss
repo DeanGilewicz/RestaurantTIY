@@ -10,6 +10,9 @@
 // Custom Styles
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 62.5%;
+}
 
 img {
   max-width: 100%;
@@ -39,11 +42,6 @@ img {
   .middle-section {
     @include span-columns(12);
     @include omega(3n);
-
-    div {
-      height: 200px;
-      background-color: red;
-    }
 
     .news {
       @include span-columns(4 of 12);
