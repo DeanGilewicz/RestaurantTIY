@@ -1,3 +1,4 @@
+// LOCATION SECTION CONTAINER
 
 .location {
   border: 1px solid HSLA(0, 0%, 70%, 1);
@@ -8,10 +9,14 @@
     margin: 2% 0% 2% 5%;
   }
 
+  // GOOGLE MAP
+
   .google {
     margin: 2% 5%;
     border: 1px solid HSLA(0, 0%, 70%, 1);
   }
+
+  // CONTACT INFORMATION
 
   .contact {
     font-size: 1.3em;
@@ -41,3 +46,5 @@
     }
   }
 }
+
+// END OF LOCATION LOCATION SECTION CONTAINER
