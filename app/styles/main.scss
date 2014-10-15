@@ -21,6 +21,7 @@ img {
 
 .container {
   @include outer-container;
+  $mobile: new-breakpoint(max-width 600px 4);
   max-width: 960px;
   overflow: auto;
 
@@ -43,17 +44,29 @@ img {
   .middle-section {
     @include span-columns(12);
     @include omega(3n);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
 
     .news {
       @include span-columns(4 of 12);
+      @include media($mobile) {
+        @include span-columns(4 of 4);
+      }
     }
 
     .special {
       @include span-columns(4 of 12);
+      @include media($mobile) {
+        @include span-columns(4 of 4);
+      }
     }
 
     .location {
       @include span-columns(4 of 12);
+      @include media($mobile) {
+        @include span-columns(4 of 4);
+      }
     }
   }
 
@@ -86,7 +99,11 @@ img {
 }
 
 // Media Queries
-@media (max-width: 600px){
+/* @media screen and (max-width: 600px) {
+
+  .hero-image {
+    @include span-columns(2);
+  }
 
   .middle-section {
 
@@ -102,4 +119,4 @@ img {
       @include span-columns(12 of 12);
     }
   }
-}
+} */
