@@ -103,7 +103,75 @@
           </div>
 <!--End of menu section-->
           <div class="reservations">
-            Reservations
+            <h2>Reservations</h2>
+
+              <form id="form_id" action="index.html" method="post">>
+                <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>:</p>
+
+                <section>
+                  <h3>Full Name</h3>
+                  <section>
+                    <p>
+                      <label for="name">
+                        <span>Name: </span>
+                        <input type="text" id="name" name="fullName" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="guests">
+                        <span>Number of Guests: </span>
+                        <input type="number" id="guests" name="guestNumber" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="date">
+                        <span>Date:</span>
+                        <input id="datepicker" name="date" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                  <p>
+                    <label for="specialNotes">
+                      <span>Special Notes:</span>
+                      <input type="text" id="notes" name="specialNotes" />
+                    </label>
+                  </p>
+                </section>
+                <section>
+                  <label for="seatingPreference">
+                    <span>Seating Preference:</span>
+                    <select name="seating" id="seating" >
+                      <option value="chefsTable">Chef's Table</option>
+                      <option value="rooftop">Veranda</option>
+                      <option value="bar">Bar</option>
+                      <option value="indoor">Indoor</option>
+                    </select>
+                  </label>
+                </section>
+                <section>
+                  <input type="submit" value="Submit">
+                </section>
+
+
+              </form>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+            </form>
+
+
           </div>
         </div>
 
