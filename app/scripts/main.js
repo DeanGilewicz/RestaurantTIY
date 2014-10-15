@@ -31,3 +31,20 @@ var render_special = _.template(template_special);
 
 var template_news= $('').html();
 var render_news = _.template(template_news);*/
+
+
+// Tab Functionality
+$('#story').click(function(){
+  $('.tabs div').removeClass('open');
+  $('.story').addClass('open');
+});
+
+$('#menu').click(function(){
+  $('.tabs div').removeClass('open');
+  $('.menu').addClass('open');
+});
+
+$('#reservations').click(function(){
+  $('.tabs div').removeClass('open');
+  $('.reservations').addClass('open');
+});
