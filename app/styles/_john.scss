@@ -21,3 +21,19 @@
   }
 
 }
+
+
+.photos{
+
+  text-align: center;
+
+  ul{
+    padding: 0em;
+  }
+
+  li{
+    list-style-type: none;
+    @include margin (5% 10% 5 10%);
+  }
+
+}
