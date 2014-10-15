@@ -43,28 +43,6 @@ img {
     @include span-columns(12);
     @include omega(3n);
 
-    div {
-      height: 200px;
-    }
-
-.location {
-  height: 280px;
-  border: 1px solid HSLA(0, 0%, 70%, 1);
-  background-color: HSLA(0, 0%, 100%, 1);
-
-  .contact {
-    font-size: 1.4em;
-    text-align: center;
-
-    li {
-      float: left;
-      font-size: 0.8em;
-      list-style-type: none;
-      margin-left: 15px;
-      border: 1px solid blue;
-    }
-  }
-}
     .news {
       @include span-columns(4 of 12);
     }
