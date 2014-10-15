@@ -21,10 +21,9 @@ $.getJSON(api_menu).done( function(menu_data){
 
     $('.menu_sides').append(render_menu(side));
     })
-
 });
 
-/*
+// Specials section
 var template_special= $('').html();
 var render_special = _.template(template_special);*/
 

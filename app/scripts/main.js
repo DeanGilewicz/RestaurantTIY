@@ -21,12 +21,11 @@ $.getJSON(api_menu).done( function(menu_data){
 
     $('.menu_sides').append(render_menu(side));
     })
-
 });
 
-/*
-var template_special= $('').html();
-var render_special = _.template(template_special);*/
+// Specials section
+//var template_special= $('').html();
+//var render_special = _.template(template_special);*/
 
 // Tab Functionality
 $('#story').click(function(){
