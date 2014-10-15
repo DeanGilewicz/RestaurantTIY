@@ -1,0 +1,23 @@
+.news {
+
+  overflow: hidden;
+  @include padding (0em 1% 0em 1%);
+
+  li {
+    list-style-type: none;
+  }
+
+  .news_box{
+    @include margin (1.3em null 1.3em null);
+  }
+
+  .news_title{
+    font-weight: bold;
+    border-top: 0.1em solid blue;
+  }
+
+  .news_text{
+
+  }
+
+}

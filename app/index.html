@@ -45,11 +45,10 @@
       <!-- 3 MIDDLE BOXES -->
 
       <div class="middle-section">
-        <div class="news">News</div>
-        <div class="special">Special</div>
+        <div class="news">Latest News!</div><!--html for special section -->
+        <div class="special"></div> <!--end html for special section -->
 
-        <!-- OUR LOCATION SECTION -->
-
+      <!-- OUR LOCATION SECTION -->
         <div class="location">
           <h5>Our Location</h5>
           <div class="google"> <!-- GOOGLE MAPS IFRAME INSERT -->
@@ -87,14 +86,22 @@
           <div class="story open">
             Story
           </div>
+<!--html for main menu -->
           <div class="menu">
+            <h2>Our Dinner Selections...</h2>
+            <h3>Appetizers</h3>
             <div class="menu_apps">
             </div>
+
+            <h3>Entrees</h3>
             <div class="menu_entree">
             </div>
+
+            <h3>Sides A La Carte</h3>
             <div class="menu_sides">
             </div>
           </div>
+<!--End of menu section-->
           <div class="reservations">
             Reservations
           </div>
@@ -133,17 +140,19 @@
       <div class="footer">Copyright 2014 Restaurant Name</div>
 
     </div> <!-- .container -->
-
+<!-- Specials script -->
 
     <!-- This is the news script -->
 
     <script id='news_call' type='text/template'>
-          <li>
-             <%= news_title %>
-          </li>
-          <li>
-             <%= news_text %>
-          </li>
+          <div>
+            <li class='news_title'>
+               <%= news_title %>
+            </li>
+            <li class='news_text'>
+               <%= news_text %>
+            </li>
+          </div>
     </script>
 
 
@@ -152,17 +161,14 @@
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
-      <div class="menu_section">
-            <h2></h2>
-            <div class="menu_topBox">
-              <h3><%= item %></h3>
+            <div class="menu_top">
+              <h4><%= item %></h4>
               <p><%= price %></p>
             </div>
 
-            <div class="bottomBox">
+            <div class="menu_bottom">
               <p><%=description %></p>
             </div>
-      </div>
     </script>
 
 
