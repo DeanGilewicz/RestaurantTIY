@@ -10,17 +10,22 @@ var render_menu = _.template(template_menu);
 
 $.getJSON(api_menu).done( function(menu_data){
 
-    _.each(menu_data, function(menu_items){
+    _.each(menu_data.appetizers, function (apps){
 
-    _.each(menu_items, function(b){
+    $('.menu_apps').append(render_menu(apps));
+    })
 
-    $('.menu').append(render_menu(b));
-})
+    _.each(menu_data.entrees, function (entree){
 
-})
+    $('.menu_entree').append(render_menu(entree));
+    })
+
+    _.each(menu_data.sides, function (side){
+
+    $('.menu_sides').append(render_menu(side));
+    })
 
 });
-
 
 
 /*var template_flickr= $('').html();
