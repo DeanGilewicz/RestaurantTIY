@@ -6,8 +6,8 @@ var api_news = 'http://restaurantapi.apiary-mock.com/news/latest'; //news api
 var template_flickr ;//= $('').html();
 var render_flickr ;// = _.template(template_flickr);
 
-var template_news ;//= $('').html();
-var render_news ; //= _.template(template_news);
+var template_news = $('#news_call').html();
+var render_news = _.template(template_news);
 
 var news_title,
     news_text;
@@ -19,23 +19,18 @@ var news_title,
           news_title = news_data.title;
 
           news_text = news_data.post;
-          //console.log(news_text);
+          console.log(news_text);
+
+          $('.news').append(render_news(news_data));
         });
 
 
 //This calls the Flickr API
 
-$.getJSON(api_flickr).done( function(flick_data){
+var pages;
 
-    console.log(flick_data);
+ $.getJSON(api_flickr).done( function(){
 
-    flick_data.forEach(function(photo_array){
-      photo_array.forEach(function(photo_data){
+    console.log('hi');
 
-      var photo_title = photo_data.title;
-
-      console.log(photo_title);
-    })
-})
-    console.log("hi");
-})
+});
