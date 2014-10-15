@@ -15,27 +15,111 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+    <div class="container">
 
-        <li>Sass</li>
+      <!-- BRANDING/HEADER -->
+
+      <div class="branding">
+        <div class="logo">
+          <h1>LOGO</h1>
+        </div>
+        <ul class="social">
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
+        </ul>
+        <div class="hero-image">
+          <img src="http://placehold.it/1024x300" alt="">
+        </div>
+      </div>
+
+      <!-- END BRANDING/HEADER -->
+      <!-- 3 MIDDLE BOXES -->
+
+      <div class="middle-section">
+        <div class="news">News</div>
+        <div class="special">Special</div>
+        <div class="location">Location</div>
+      </div>
+
+      <!-- END 3 MIDDLE BOXES -->
+
+      <div class="bottom">
+
+        <!-- TAB SECTION -->
+
+        <div class="tabs">
+          <ul class="tab-header">
+            <li>Our Story</li>
+            <li>Menu</li>
+            <li>Reservations</li>
+          </ul>
+          <div class="story">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos a molestias aspernatur! Fugiat aut suscipit excepturi, blanditiis, maxime, sed ut nisi amet doloribus ab iure, facilis atque error. Distinctio, quae!
+          </div>
+          <div class="menu">
+            <div class="menu_apps">
+            </div>
+            <div class="menu_entree">
+            </div>
+            <div class="menu_sides">
+            </div>
+          </div>
+          <div class="reservations">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, maxime impedit. Exercitationem iste voluptates, ipsa voluptas quas sequi sint, molestiae velit distinctio autem harum iusto qui quisquam, sed rerum? Debitis.
+          </div>
+        </div>
+
+        <!-- END TAB SECTION -->
+        <!-- FLICKR PHOTOS SECTION -->
+
+        <div class="photos">
+          <h3>Food Photos...</h3>
+          <ul class="flickr">
+            <li>
+              <img src="http://placehold.it/300x300" alt="">
+            </li>
+            <li>
+              <img src="http://placehold.it/300x300" alt="">
+            </li>
+            <li>
+              <img src="http://placehold.it/300x300" alt="">
+            </li>
+            <li>
+              <img src="http://placehold.it/300x300" alt="">
+            </li>
+            <li>
+              <img src="http://placehold.it/300x300" alt="">
+            </li>
+          </ul>
+        </div>
+
+        <!-- FLICKR PHOTOS SECTION -->
+
+      </div> <!-- .bottom -->
+
+      <!-- FOOTER -->
+
+      <div class="footer">Copyright 2014 Restaurant Name</div>
+
+    </div> <!-- .container -->
 
 
-        <li>Modernizr</li>
 
+<!--Main menu template -->
+    <script id="template_menu" type="text/template">
+      <div class="menu_section">
+            <h2></h2>
+            <div class="menu_topBox">
+              <h3><%= item %></h3>
+              <p><%= price %></p>
+            </div>
 
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+            <div class="bottomBox">
+              <p><%=description %></p>
+            </div>
+      </div>
+    </script>
 
     <script src="scripts/vendor.js"></script>
 
