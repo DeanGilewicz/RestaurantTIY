@@ -45,3 +45,10 @@ $('#reservations').click(function(){
   $('.tabs div').removeClass('open');
   $('.reservations').addClass('open');
 });
+
+
+// Datepicker for reservation form date input
+
+$(document).ready(function() {
+    $('#date').datepicker();
+});
