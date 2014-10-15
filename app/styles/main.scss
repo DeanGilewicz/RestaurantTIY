@@ -21,10 +21,11 @@ img {
 
 .container {
   @include outer-container;
-  $mobile: new-breakpoint(max-width 600px 4);
+  $mobile: new-breakpoint(max-width 600px 6);
   max-width: 960px;
   overflow: auto;
 
+// BRANDING
   .logo {
     @include span-columns(3);
     background-color: red;
@@ -41,44 +42,47 @@ img {
     @include span-columns(12);
   }
 
+// 3 MIDDLE MODULES
   .middle-section {
     @include span-columns(12);
     @include omega(3n);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(6);
     }
 
     .news {
       @include span-columns(4 of 12);
       @include media($mobile) {
-        @include span-columns(4 of 4);
+        @include span-columns(6 of 6);
       }
     }
 
     .special {
       @include span-columns(4 of 12);
       @include media($mobile) {
-        @include span-columns(4 of 4);
+        @include span-columns(6 of 6);
       }
     }
 
     .location {
       @include span-columns(4 of 12);
       @include media($mobile) {
-        @include span-columns(4 of 4);
+        @include span-columns(6 of 6);
       }
     }
   }
 
+// BOTTOM
   .bottom {
     @include span-columns(12);
 
-    div {
-      background-color: blue;
-    }
+// TABS
 
     .tabs {
       @include span-columns(9 of 12);
+      @include media($mobile) {
+        @include span-columns(4 of 4);
+      }
 
       div {
         background-color: red;
@@ -86,9 +90,20 @@ img {
       }
     }
 
+// FLICKR PHOTOS
     .photos {
       @include span-columns(3 of 12);
       @include omega();
+      @include media($mobile) {
+        $column: 4em;
+        $gutter: 1em;
+        @include span-columns(6 of 6);
+
+        li {
+          @include span-columns(2 of 6);
+          @include omega(3n);
+        }
+      }
     }
 
   }
@@ -97,26 +112,3 @@ img {
     @include span-columns(12);
   }
 }
-
-// Media Queries
-/* @media screen and (max-width: 600px) {
-
-  .hero-image {
-    @include span-columns(2);
-  }
-
-  .middle-section {
-
-    .news {
-      @include span-columns(12 of 12);
-    }
-
-    .special {
-      @include span-columns(12 of 12);
-    }
-
-    .location {
-      @include span-columns(12 of 12);
-    }
-  }
-} */
