@@ -45,11 +45,12 @@ img {
 
     div {
       height: 200px;
-      background-color: red;
     }
 
 .location {
-  height: 400px;
+  height: 280px;
+  border: 1px solid HSLA(0, 0%, 70%, 1);
+  background-color: HSLA(0, 0%, 100%, 1);
 
   .contact {
     font-size: 1.4em;
@@ -59,7 +60,7 @@ img {
       float: left;
       font-size: 0.8em;
       list-style-type: none;
-      margin-left: 8px;
+      margin-left: 15px;
       border: 1px solid blue;
     }
   }
