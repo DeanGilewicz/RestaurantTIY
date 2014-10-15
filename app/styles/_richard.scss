@@ -5,13 +5,12 @@
     display: none;
   }
 
-  .open {
+  div.open {
     display: block;
   }
 }
 
 // Flickr Photos Section
-
 .photos {
 
   ul {
@@ -24,5 +23,25 @@
     margin: 20px 0 0 0;
     padding: 0;
     list-style: none;
+  }
+}
+
+// Tab Header
+.tab-header {
+  padding-left: 0;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+
+  li {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    border: 0;
+    margin-bottom: -1px;
+  }
+
+  li.open {
+    border-left: 1px solid lightgrey; border-right: 1px solid lightgrey; border-top: 1px solid lightgrey;
+    border-bottom: 1px solid #fff;
   }
 }
