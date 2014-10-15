@@ -1,7 +1,8 @@
- // Bourbon & Neat
+// Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+// Our Partials
 @import 'richard';
 @import 'dean';
 @import 'joanna';
@@ -10,6 +11,7 @@
 // Custom Styles
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 img {
   max-width: 100%;
@@ -85,4 +87,22 @@ img {
     @include span-columns(12);
   }
 }
+
+// Media Queries
+@media (max-width: 600px){
+
+  .middle-section {
+
+    .news {
+      @include span-columns(12 of 12);
+    }
+
+    .special {
+      @include span-columns(12 of 12);
+    }
+
+    .location {
+      @include span-columns(12 of 12);
+    }
+  }
 }
