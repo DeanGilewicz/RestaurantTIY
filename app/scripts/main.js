@@ -35,10 +35,9 @@ $.getJSON(api_menu).done (function(menu_data){
 
       $('.special_info').append(render_special(special_item));
     })
-        }
-      })
+    }
+    })
   })
-
 
     _.each(menu_data.appetizers, function (apps){
       $('.menu_apps').append(render_menu(apps));

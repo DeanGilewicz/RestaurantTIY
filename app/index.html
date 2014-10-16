@@ -52,7 +52,8 @@
         <!--html for special section -->
 
         <div class="special">
-          <img src='http://placekitten.com/g/300/125'/>
+          <h2>Today's Special</h2>
+          <img src='http://placekitten.com/g/250/125'/>
           <div class="special_info">
           </div>
         </div>
@@ -210,9 +211,11 @@
 
 <!--Specials template -->
     <script id="template_special" type="text/template">
-            <div class="special_items">
-              <p><%= special_item %></p>
+            <div class="special_items_top">
+              <h3><%= special_item %></h3>
               <p><%= special_price %></p>
+            </div>
+            <div class="special_items_bottom">
               <p><%= special_description %></p>
             </div>
     </script>

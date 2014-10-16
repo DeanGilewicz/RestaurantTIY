@@ -1,3 +1,46 @@
+.special {
+  border: 1px solid gray;
+}
+
+.special h2{
+  padding-top: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+}
+
+.special img {
+  padding-top: 20px;
+  margin-right: 4%;
+  margin-left: 8%;
+}
+
+.special_info {
+  width: 100%;
+  overflow: auto;
+}
+
+.special_items_top h3 {
+  float: left;
+  width: 55%;
+  padding-top: 5px;
+  padding-left: 4%
+}
+
+.special_items_top p {
+  float: right;
+  padding-top: 5px;
+  padding-right: 4%;
+}
+
+.special_items_bottom p {
+  float: right;
+  padding-left: 4%;
+  padding-bottom: 7px;
+}
+
+
+//styling for menu
 .menu {
   width: 100%;
   padding-left: 1%;
