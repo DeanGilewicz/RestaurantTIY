@@ -92,18 +92,18 @@
           </div>
 <!--html for main menu -->
           <div class="menu">
-            <h2>Our Dinner Selections...</h2>
-            <h2>Appetizers</h2>
-            <div class="menu_apps">
-            </div>
+            <h1>Our Dinner Selections...</h1>
+              <h2>Appetizers</h2>
+                <div class="menu_apps">
+                </div>
 
-            <h2>Entrees</h2>
-            <div class="menu_entree">
-            </div>
+              <h2>Entrees</h2>
+                <div class="menu_entree">
+                </div>
 
-            <h2>Sides A La Carte</h2>
-            <div class="menu_sides">
-            </div>
+              <h2>Sides A La Carte</h2>
+                <div class="menu_sides">
+                </div>
           </div>
 <!--End of menu section-->
           <div class="reservations">
@@ -204,8 +204,8 @@
 <!--Specials template -->
     <script id="template_special" type="text/template">
             <div class="special_items_top">
-              <h3><%= special_item %></h3>
-              <p><%= special_price %></p>
+              <h3><span><%= special_item %></span></h3>
+              <p><span><%= special_price %></span></p>
             </div>
             <div class="special_items_bottom">
               <p><%= special_description %></p>
@@ -215,8 +215,8 @@
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
             <div class="menu_top">
-              <h4><span><%= item %></span></h4>
-              <p><span><%= price %></span></p>
+              <h3><%= item %></h3>
+              <p><%= price %></p>
             </div>
 
             <div class="menu_bottom">
