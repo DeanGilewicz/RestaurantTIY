@@ -48,3 +48,10 @@ $('#reservations').click(function(){
   $(this).addClass('open');
   $('.reservations').addClass('open');
 });
+
+
+// Datepicker for reservation form date input
+
+$(document).ready(function() {
+    $('#date').datepicker();
+});
