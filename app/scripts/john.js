@@ -1,6 +1,6 @@
 
 
-var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + 'e1126579a99d5f23c6802a189f95b9dd' + '&user_id=56199382@N00&per_page=12&page=4&format=json';          // Flickr API
+var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + 'e1126579a99d5f23c6802a189f95b9dd' + '&user_id=56199382@N00&per_page=12&page=4&format=json&nojsoncallback=1';          // Flickr API
 var api_news = 'http://restaurantapi.apiary-mock.com/news/latest'; //news api
 
 var template_flickr ;//= $('').html();
@@ -19,7 +19,7 @@ var news_title,
           news_title = news_data.title;
 
           news_text = news_data.post;
-          console.log(news_text);
+//          console.log(news_text);
 
           $('.news').append(render_news(news_data));
         });
