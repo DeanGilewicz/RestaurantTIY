@@ -51,9 +51,9 @@ var pages;
             food_photo = 'https://farm' + farm_id +'.staticflickr.com/' + server_id + '/' + id + '_' + secret + '_m.jpg';
 
             console.log(food_photo);
-            //orgs = o.avatar_url;
 
-            //$('.org_img').append(render_org(o));
+
+            $('.flickr').append(render_flickr(photo));
 
           })
 
