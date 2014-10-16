@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
-<link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -140,13 +141,20 @@
                         <strong><abbr title="required">*</abbr></strong>
                       </label>
                     </p>
-                  <p>
-                    <label for="specialNotes">
-                      <span>Special Notes:</span>
-                      <input type="text" id="notes" name="specialNotes" />
-                    </label>
-                  </p>
-                </section>
+                    <p>
+                      <label for="time">
+                        <span>Time:</span>
+                        <input type="time" id="time" name="time" min="18:00" max="22:30" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="specialNotes">
+                        <span>Special Notes:</span>
+                        <textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea>
+                      </label>
+                    </p>
+                  </section>
                 <section>
                   <label for="seatingPreference">
                     <span>Seating Preference:</span>
@@ -172,21 +180,7 @@
         <div class="photos">
           <h3>Food Photos...</h3>
           <ul class="flickr">
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
+
           </ul>
         </div>
 
@@ -235,6 +229,13 @@
             </div>
     </script>
 
+<!-- Photo template -->
+    <script id='template_photos' type='text/template'>
+      <li>
+        <img src=' <%= food_photo %>'>
+      </li>
+    </script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -243,7 +244,9 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-  <!--  <script src='scripts/token.js'></script> -->
+
+        <!-- // <script src='scripts/token.js'></script> -->
+
 
         <!-- build:js scripts/main.js -->
         <script src='scripts/john.js'></script>

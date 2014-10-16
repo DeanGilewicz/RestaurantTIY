@@ -1,7 +1,8 @@
 .news {
 
   overflow: hidden;
-  @include padding (0em 1% 0em 1%);
+  @include padding (0em 2% 0em 2%);
+  background: #dddddd;
 
   li {
     list-style-type: none;
