@@ -37,13 +37,29 @@
       <!-- 3 MIDDLE BOXES -->
 
       <div class="middle-section">
-        <div class="news">News</div>
-
-<!--html for special section -->
+        <div class="news">Latest News!</div>
+        <!--html for special section -->
         <div class="special">
         </div>
-<!--end html for special section -->
-        <div class="location">Location</div>
+        <!--end html for special section -->
+        <div class="location">
+          <h5>Our Location</h5>
+          <div class="google">
+            <iframe
+              width="100%" height="200"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?q=11101%2041st%20Ave%2C%20Flushing%2C%20NY%2011368%2C%20United%20States&key=AIzaSyCrNC4AETKT_7FVqnWvNuUy-fLn9zYTUHc">
+            </iframe>
+          </div>
+          <div class="contact">
+            <address>11101 41st Ave, Flushing, NY 11368</address>
+            <ul>
+              <li><a href="tel:5555551234">555-555-1234</a></li>
+              <li><a href=https://www.google.com/maps/@40.7511,-73.8554,16z?hl=en-US>Map</a></li>
+              <li><a href="https://www.google.com/maps/dir/111-01+41st+Ave,+Flushing,+NY+11368/111-01+41st+Ave,+Flushing,+NY+11368/@40.751132,-73.855449,16z/data=!4m13!4m12!1m5!1m1!1s0x89c25fc499e378b9:0xc2e4c2fea050b416!2m2!1d-73.8554489!2d40.751132!1m5!1m1!1s0x89c25fc499e378b9:0xc2e4c2fea050b416!2m2!1d-73.8554489!2d40.751132?hl=en-US">Directions</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- END 3 MIDDLE BOXES -->
@@ -117,6 +133,25 @@
     </div> <!-- .container -->
 <!-- Specials script -->
 
+    <!-- This is the news script -->
+
+    <script id='news_call' type='text/template'>
+          <div>
+            <li class='news_title'>
+               <%= news_title %>
+            </li>
+            <li class='news_text'>
+               <%= news_text %>
+            </li>
+          </div>
+    </script>
+
+<!--Specials template -->
+    <script id="template_special" type="text/template">
+            <div class="special_top">
+              <p><%= menu_item_id %></p>
+            </div>
+    </script>
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
@@ -130,7 +165,10 @@
             </div>
     </script>
 
+
     <script src="scripts/vendor.js"></script>
+
+        <script src='scripts/token.js'></script>
 
         <script src="scripts/main.js"></script>
 </body>
