@@ -40,6 +40,9 @@
         <div class="news">Latest News!</div>
         <!--html for special section -->
         <div class="special">
+          <img src='http://placekitten.com/g/300/125'/>
+          <div class="special_info">
+          </div>
         </div>
         <!--end html for special section -->
         <div class="location">
@@ -148,8 +151,10 @@
 
 <!--Specials template -->
     <script id="template_special" type="text/template">
-            <div class="special_top">
-              <p><%= menu_item_id %></p>
+            <div class="special_items">
+              <p><%= item %></p>
+              <p><%= price %></p>
+              <p><%=description %></p>
             </div>
     </script>
 
