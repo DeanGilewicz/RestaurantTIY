@@ -22,8 +22,6 @@
 
 .special_items_top h3 {
   float: left;
-  width: 80%;
-  padding-top: 5px;
   padding-left: 4%;
 }
 
@@ -36,9 +34,16 @@
 .special_items_bottom p {
   float: right;
   padding-left: 4%;
-  padding-bottom: 7px;
+  padding-bottom: 12px;
 }
-
+//dots
+.special_items_top:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 23px;
+  border-bottom: 1px dotted black;
+}
 
 //styling for menu
 .menu {
@@ -47,7 +52,7 @@
   overflow: auto;
 }
 
-.menu h2 {
+.menu h1 {
   border-bottom: 1px solid black;
 }
 
@@ -58,34 +63,38 @@
 
 .menu_apps {
   padding-left: 1%;
+  font-size: 12px;
 }
 
 .menu_entree {
   padding-left: 1%;
+  font-size: 12px;
 }
 
 .menu_sides {
   padding-left: 1%;
+  font-size: 12px;
 }
 
 .menu_top {
   overflow: auto;
-  border-bottom: 1px dotted gray;
 }
 
-.menu_top h4 {
+.menu_top h3 {
   float: left;
   margin-bottom: 0px;
-  background-color: white;
-}
-
-.menu_top span {
-  background-color: white;
-  overflow: hidden;
 }
 
 .menu_top p {
   float: right;
   margin-bottom: 0px;
-  background-color: white;
+  font-size: 12px;
+}
+//the dots
+.menu_top:after {
+	content: "";
+	display: block;
+	overflow: hidden;
+	height: 23px;
+	border-bottom: 1px dotted black;
 }
