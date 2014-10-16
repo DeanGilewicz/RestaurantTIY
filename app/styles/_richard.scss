@@ -1,8 +1,24 @@
+$cursive: 'Miss Fajardose', cursive;
+
 // Hero Image
 
 .hero-image {
   height: 400px;
   overflow: hidden;
+  position: relative;
+
+  h1 {
+    font-family: $cursive;
+    font-size: 6em;
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    text-align: center;
+    margin: auto;
+    height: auto;
+    color: #fff;
+    opacity: 0.8;
+  }
 }
 
 // Tab Functionality
