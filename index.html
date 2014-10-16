@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="styles/vendor.css">
 
+    <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="styles/main.css">
 
     <script src="scripts/vendor/modernizr.js"></script>
@@ -29,7 +31,8 @@
           <li>Instagram</li>
         </ul>
         <div class="hero-image">
-          <img src="http://placehold.it/1024x300" alt="">
+          <img src="images/header-img1.jpg" alt="">
+          <h1>Fork &amp; Spoon</h1>
         </div>
       </div>
 
@@ -37,14 +40,33 @@
       <!-- 3 MIDDLE BOXES -->
 
       <div class="middle-section">
-        <div class="news">News</div>
+        <div class="news">Latest News!</div>
+        <!--html for special section -->
+        <div class="special">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nam nostrum veniam a, provident voluptatem, commodi, quisquam repudiandae, ullam beatae non tempore hic! Quidem ut quos, iure cumque placeat expedita.</div>
+        <!--end html for special section -->
 
-<!--html for special section -->
-        <div class="special">
+      <!-- OUR LOCATION SECTION -->
+        <div class="location">
+          <h5>Our Location</h5>
+          <div class="google"> <!-- GOOGLE MAPS IFRAME INSERT -->
+            <iframe
+              width="100%" height="200"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?q=11101%2041st%20Ave%2C%20Flushing%2C%20NY%2011368%2C%20United%20States&key=AIzaSyCrNC4AETKT_7FVqnWvNuUy-fLn9zYTUHc">
+            </iframe>
+          </div> <!-- END OF GOOGLE MAPS -->
+          <div class="contact">
+            <address>11101 41st Ave, Flushing, NY 11368</address>
+            <ul>
+              <li><a href="tel:5555551234">555-555-1234</a></li>
+              <li><a href=https://www.google.com/maps/@40.7511,-73.8554,16z?hl=en-US>Map</a></li>
+              <li><a href="https://www.google.com/maps/dir/111-01+41st+Ave,+Flushing,+NY+11368/111-01+41st+Ave,+Flushing,+NY+11368/@40.751132,-73.855449,16z/data=!4m13!4m12!1m5!1m1!1s0x89c25fc499e378b9:0xc2e4c2fea050b416!2m2!1d-73.8554489!2d40.751132!1m5!1m1!1s0x89c25fc499e378b9:0xc2e4c2fea050b416!2m2!1d-73.8554489!2d40.751132?hl=en-US">Directions</a></li>
+            </ul>
+          </div>
         </div>
-<!--end html for special section -->
-        <div class="location">Location</div>
       </div>
+
+      <!-- END OF OUR LOCATION SECTION -->
 
       <!-- END 3 MIDDLE BOXES -->
 
@@ -54,7 +76,7 @@
 
         <div class="tabs">
           <ul class="tab-header">
-            <li id="story">Our Story</li>
+            <li id="story" class="open">Our Story</li>
             <li id="menu">Menu</li>
             <li id="reservations">Reservations</li>
           </ul>
@@ -78,8 +100,57 @@
           </div>
 <!--End of menu section-->
           <div class="reservations">
-            Reservations
+            <h2>Reservations</h2>
+              <form id="form_id" action="index.html" method="post">
+                <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>:</p>
+                <section>
+                  <h3>Full Name</h3>
+                  <section>
+                    <p>
+                      <label for="name">
+                        <span>Name: </span>
+                        <input type="text" id="name" name="fullName" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="guests">
+                        <span>Number of Guests: </span>
+                        <input type="number" id="guests" name="guestNumber" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="date">
+                        <span>Date:</span>
+                        <input type="text" id="date" name="date" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                  <p>
+                    <label for="specialNotes">
+                      <span>Special Notes:</span>
+                      <input type="text" id="notes" name="specialNotes" />
+                    </label>
+                  </p>
+                </section>
+                <section>
+                  <label for="seatingPreference">
+                    <span>Seating Preference:</span>
+                    <select name="seating" id="seating" >
+                      <option value="chefsTable">Chef's Table</option>
+                      <option value="rooftop">Veranda</option>
+                      <option value="bar">Bar</option>
+                      <option value="indoor">Indoor</option>
+                    </select>
+                  </label>
+                </section>
+                <section>
+                  <input type="submit" value="Submit">
+                </section>
+              </form>
           </div>
+
         </div>
 
         <!-- END TAB SECTION -->
@@ -106,7 +177,7 @@
           </ul>
         </div>
 
-        <!-- FLICKR PHOTOS SECTION -->
+        <!-- END FLICKR PHOTOS SECTION -->
 
       </div> <!-- .bottom -->
 
@@ -117,6 +188,19 @@
     </div> <!-- .container -->
 <!-- Specials script -->
 
+    <!-- This is the news script -->
+
+    <script id='news_call' type='text/template'>
+          <div>
+            <li class='news_title'>
+               <%= news_title %>
+            </li>
+            <li class='news_text'>
+               <%= news_text %>
+            </li>
+          </div>
+    </script>
+
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
@@ -126,11 +210,14 @@
             </div>
 
             <div class="menu_bottom">
-              <p><%=description %></p>
+              <p><%= description %></p>
             </div>
     </script>
 
+
     <script src="scripts/vendor.js"></script>
+
+        <script src='scripts/token.js'></script>
 
         <script src="scripts/main.js"></script>
 </body>
