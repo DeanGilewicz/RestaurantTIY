@@ -8,7 +8,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="styles/vendor.css">
-<link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
 
     <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
 
@@ -43,17 +42,14 @@
       <div class="middle-section">
         <div class="news">Latest News!</div>
         <!--html for special section -->
-<<<<<<< HEAD
 
         <div class="special">
-          <img src='http://placekitten.com/g/300/125'/>
+          <h2>Today's Special</h2>
+          <img src='http://placekitten.com/g/225/125'/>
           <div class="special_info">
           </div>
         </div>
 
-=======
-        <div class="special">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nam nostrum veniam a, provident voluptatem, commodi, quisquam repudiandae, ullam beatae non tempore hic! Quidem ut quos, iure cumque placeat expedita.</div>
->>>>>>> dev
         <!--end html for special section -->
 
       <!-- OUR LOCATION SECTION -->
@@ -96,18 +92,18 @@
           </div>
 <!--html for main menu -->
           <div class="menu">
-            <h2>Our Dinner Selections...</h2>
-            <h3>Appetizers</h3>
-            <div class="menu_apps">
-            </div>
+            <h1>Our Dinner Selections...</h1>
+              <h2>Appetizers</h2>
+                <div class="menu_apps">
+                </div>
 
-            <h3>Entrees</h3>
-            <div class="menu_entree">
-            </div>
+              <h2>Entrees</h2>
+                <div class="menu_entree">
+                </div>
 
-            <h3>Sides A La Carte</h3>
-            <div class="menu_sides">
-            </div>
+              <h2>Sides A La Carte</h2>
+                <div class="menu_sides">
+                </div>
           </div>
 <!--End of menu section-->
           <div class="reservations">
@@ -138,13 +134,20 @@
                         <strong><abbr title="required">*</abbr></strong>
                       </label>
                     </p>
-                  <p>
-                    <label for="specialNotes">
-                      <span>Special Notes:</span>
-                      <input type="text" id="notes" name="specialNotes" />
-                    </label>
-                  </p>
-                </section>
+                    <p>
+                      <label for="time">
+                        <span>Time:</span>
+                        <input type="time" id="time" name="time" min="18:00" max="22:30" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="specialNotes">
+                        <span>Special Notes:</span>
+                        <textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea>
+                      </label>
+                    </p>
+                  </section>
                 <section>
                   <label for="seatingPreference">
                     <span>Seating Preference:</span>
@@ -170,21 +173,7 @@
         <div class="photos">
           <h3>Food Photos...</h3>
           <ul class="flickr">
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
+
           </ul>
         </div>
 
@@ -212,22 +201,21 @@
           </div>
     </script>
 
-<<<<<<< HEAD
 <!--Specials template -->
     <script id="template_special" type="text/template">
-            <div class="special_items">
-              <p><%= special_item %></p>
-              <p><%= special_price %></p>
+            <div class="special_items_top">
+              <h3><span><%= special_item %></span></h3>
+              <p><span><%= special_price %></span></p>
+            </div>
+            <div class="special_items_bottom">
               <p><%= special_description %></p>
             </div>
     </script>
-=======
->>>>>>> dev
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
             <div class="menu_top">
-              <h4><%= item %></h4>
+              <h3><%= item %></h3>
               <p><%= price %></p>
             </div>
 
@@ -236,14 +224,19 @@
             </div>
     </script>
 
+<!-- Photo template -->
+    <script id='template_photos' type='text/template'>
+      <li>
+        <img src=' <%= food_photo %>'>
+      </li>
+    </script>
+
 
     <script src="scripts/vendor.js"></script>
 
-<<<<<<< HEAD
-  <!--  <script src='scripts/token.js'></script> -->
-=======
-        <script src='scripts/token.js'></script>
->>>>>>> dev
+
+        <!-- // <script src='scripts/token.js'></script> -->
+
 
         <script src="scripts/main.js"></script>
 </body>

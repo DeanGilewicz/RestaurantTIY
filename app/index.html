@@ -52,7 +52,8 @@
         <!--html for special section -->
 
         <div class="special">
-          <img src='http://placekitten.com/g/300/125'/>
+          <h2>Today's Special</h2>
+          <img src='http://placekitten.com/g/225/125'/>
           <div class="special_info">
           </div>
         </div>
@@ -101,18 +102,18 @@
           </div>
 <!--html for main menu -->
           <div class="menu">
-            <h2>Our Dinner Selections...</h2>
-            <h3>Appetizers</h3>
-            <div class="menu_apps">
-            </div>
+            <h1>Our Dinner Selections...</h1>
+              <h2>Appetizers</h2>
+                <div class="menu_apps">
+                </div>
 
-            <h3>Entrees</h3>
-            <div class="menu_entree">
-            </div>
+              <h2>Entrees</h2>
+                <div class="menu_entree">
+                </div>
 
-            <h3>Sides A La Carte</h3>
-            <div class="menu_sides">
-            </div>
+              <h2>Sides A La Carte</h2>
+                <div class="menu_sides">
+                </div>
           </div>
 <!--End of menu section-->
           <div class="reservations">
@@ -212,19 +213,21 @@
 
 <!--Specials template -->
     <script id="template_special" type="text/template">
-            <div class="special_items">
-              <p><%= special_item %></p>
-              <p><%= special_price %></p>
+            <div class="special_items_top">
+              <h3><span><%= special_item %></span></h3>
+              <p><span><%= special_price %></span></p>
+            </div>
+            <div class="special_items_bottom">
               <p><%= special_description %></p>
             </div>
     </script>
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
-      <div class="menu_top">
-        <h4><%= item %></h4>
-        <p><%= price %></p>
-      </div>
+            <div class="menu_top">
+              <h3><%= item %></h3>
+              <p><%= price %></p>
+            </div>
 
       <div class="menu_bottom">
         <p><%= description %></p>
