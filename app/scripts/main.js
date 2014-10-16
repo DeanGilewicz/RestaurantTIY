@@ -53,7 +53,7 @@ $('#reservations').click(function(){
 // Datepicker for reservation form date input
 
 $(document).ready(function() {
-    $('#date').datepicker();
+    $('#date').datepicker({ minDate: 0 });
 });
 
 
@@ -63,4 +63,38 @@ function autoGrow (textField) {
   if (textField.scrollHeight > textField.clientHeight) {
     textField.style.height = textField.scrollHeight + "px";
   }
-}
+};
+
+
+// Posting form information to api
+
+var url = 'http://tiy-atl-fe-server.herokuapp.com/collections/testpostres';
+
+   // attach a submit handler to the form
+    $('#booking').submit(function(event) {
+
+      // stop form from submitting normally
+      event.preventDefault();
+
+      // Send the data using post
+      var posting = $.post( url, {
+
+        fullName: $('#name').val(),
+        guestNumber: $('#guests').val(),
+        date: $('#date').val(),
+        time: $('#time').val(),
+        notes: $('#notes').val(),
+        guestNumber:$('#guests').val(),
+        seating: $('#seating').val()
+
+      });
+
+      var booked_date = $('#date').val();
+      var booked_time = $('#time').val();
+
+      /* Alerts the results */
+      posting.done(function( data ) {
+        alert('We look forward to seeing you on' + ' ' + booked_date + ' at ' + booked_time + ' pm. ');
+      });
+
+    });

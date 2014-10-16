@@ -109,7 +109,7 @@
 <!--End of menu section-->
           <div class="reservations">
             <h2>Reservations</h2>
-              <form id="form_id" action="index.html" method="post">
+              <form id="booking" action="" method="post">
                 <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>:</p>
                 <section>
                   <h3>Full Name</h3>
@@ -124,7 +124,7 @@
                     <p>
                       <label for="guests">
                         <span>Number of Guests: </span>
-                        <input type="number" id="guests" name="guestNumber" required />
+                        <input type="number" id="guests" name="guestNumber" min="1" max="50" required />
                         <strong><abbr title="required">*</abbr></strong>
                       </label>
                     </p>
@@ -145,7 +145,7 @@
                     <p>
                       <label for="specialNotes">
                         <span>Special Notes:</span>
-                        <textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea>
+                        <textarea class="noscrollbars" onkeyup="autoGrow(this);" id="notes" name="notes"></textarea>
                       </label>
                     </p>
                   </section>
@@ -154,7 +154,7 @@
                     <span>Seating Preference:</span>
                     <select name="seating" id="seating" >
                       <option value="chefsTable">Chef's Table</option>
-                      <option value="rooftop">Veranda</option>
+                      <option value="rooftop">Rooftop</option>
                       <option value="bar">Bar</option>
                       <option value="indoor">Indoor</option>
                     </select>
