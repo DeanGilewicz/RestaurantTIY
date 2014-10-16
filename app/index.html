@@ -13,9 +13,9 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
-    <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -50,7 +50,13 @@
       <div class="middle-section">
         <div class="news">Latest News!</div>
         <!--html for special section -->
-        <div class="special">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nam nostrum veniam a, provident voluptatem, commodi, quisquam repudiandae, ullam beatae non tempore hic! Quidem ut quos, iure cumque placeat expedita.</div>
+
+        <div class="special">
+          <img src='http://placekitten.com/g/300/125'/>
+          <div class="special_info">
+          </div>
+        </div>
+
         <!--end html for special section -->
 
       <!-- OUR LOCATION SECTION -->
@@ -174,21 +180,7 @@
         <div class="photos">
           <h3>Food Photos...</h3>
           <ul class="flickr">
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
-            <li>
-              <img src="http://placehold.it/300x300" alt="">
-            </li>
+
           </ul>
         </div>
 
@@ -216,9 +208,14 @@
           </div>
     </script>
 
-
-
-
+<!--Specials template -->
+    <script id="template_special" type="text/template">
+            <div class="special_items">
+              <p><%= special_item %></p>
+              <p><%= special_price %></p>
+              <p><%= special_description %></p>
+            </div>
+    </script>
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
@@ -247,7 +244,9 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+
         <!-- // <script src='scripts/token.js'></script> -->
+
 
         <!-- build:js scripts/main.js -->
         <script src='scripts/john.js'></script>

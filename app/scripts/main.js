@@ -1,16 +1,47 @@
+
 //API variables for menu and specials
-var api_menu = 'http://restaurantapi.apiary-mock.com/menu';
-var api_special = 'http://restaurantapi.apiary-mock.com/menu/special';
+var special_item;
+var special_price;
+var special_description;
+
+var template_menu=$('#template_menu').html();
+var render_menu=_.template(template_menu);
+
+var template_special=$('#template_special').html();
+var render_special=_.template(template_special);
+
+var api_menu='http://restaurantapi.apiary-mock.com/menu';
+var api_special= 'http://restaurantapi.apiary-mock.com/menu/special';
 
 
+//Main menu & specials jquery for template
+var specialID;
+$.getJSON(api_special).done (function(special_data){
+  specialID = special_data.menu_item_id;
+});
 
-//Main menu jquery for template
-var template_menu= $('#template_menu').html();
-var render_menu = _.template(template_menu);
+$.getJSON(api_menu).done (function(menu_data){
 
-$.getJSON(api_menu).done( function(menu_data){
+    //using menu api for specials
+      _.each(menu_data, function (looking){
+
+       _.each(looking, function (all){
+
+        if (all.id === specialID) {
+          special_item = (all.item);
+          special_price = (all.price);
+          special_description = (all.description);
+      $( document ).ready(function() {
+
+      $('.special_info').append(render_special(special_item));
+    })
+        }
+      })
+  })
+
+
     _.each(menu_data.appetizers, function (apps){
-           $('.menu_apps').append(render_menu(apps));
+      $('.menu_apps').append(render_menu(apps));
     })
 
     _.each(menu_data.entrees, function (entree){
@@ -23,11 +54,6 @@ $.getJSON(api_menu).done( function(menu_data){
     $('.menu_sides').append(render_menu(side));
     })
 });
-
-
-// Specials section
-//var template_special= $('').html();
-//var render_special = _.template(template_special);*/
 
 
 // Tab Functionality
