@@ -1,3 +1,4 @@
+
 //API variables for menu and specials
 var special_item;
 var special_price;
@@ -30,14 +31,17 @@ $.getJSON(api_menu).done (function(menu_data){
           special_item = (all.item);
           special_price = (all.price);
           special_description = (all.description);
+      $( document ).ready(function() {
+
       $('.special_info').append(render_special(special_item));
+    })
         }
       })
   })
 
 
     _.each(menu_data.appetizers, function (apps){
-           $('.menu_apps').append(render_menu(apps));
+      $('.menu_apps').append(render_menu(apps));
     })
 
     _.each(menu_data.entrees, function (entree){
@@ -48,7 +52,7 @@ $.getJSON(api_menu).done (function(menu_data){
     _.each(menu_data.sides, function (side){
 
     $('.menu_sides').append(render_menu(side));
-  })
+    })
 });
 
 
