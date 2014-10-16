@@ -59,6 +59,7 @@ $.getJSON(api_menu).done (function(menu_data){
 
     $('.menu_sides').append(render_menu(side));
     })
+
 });
 
 
@@ -72,15 +73,13 @@ $.getJSON(api_menu).done (function(menu_data2){
 
   _.each(looking, function (all){
 
+
   $.getJSON(api_special).done (function(special_data){
 
-    var matches = _.findWhere(special_data == all);
+    if (all.id == special_data.menu_item_id)
+      console.log(all.item, all.price, all.description);
 
-
-//var match = _.findWhere (all.id == special_data.menu_item_id);
-
-
-  //$('.special').append(render_special());
+//  $('.special').append(render_special());
 })
 })
 })
