@@ -221,21 +221,49 @@
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
-            <div class="menu_top">
-              <h4><%= item %></h4>
-              <p><%= price %></p>
-            </div>
+      <div class="menu_top">
+        <h4><%= item %></h4>
+        <p><%= price %></p>
+      </div>
 
-            <div class="menu_bottom">
-              <p><%= description %></p>
-              <ul class="menu_icons">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
+      <div class="menu_bottom">
+        <p><%= description %></p>
+        <ul class="menu_icons">
+          <% if(allergies){ %>
+            <li class="allergies">
+              <span></span>
+              <div></div>
+            </li>
+          <% };
+          if(favorite){ %>
+            <li class="favorite">
+              <span></span>
+              <div></div>
+            </li>
+          <% };
+          if(spicy){ %>
+            <li class="spicy">
+              <span></span>
+              <div></div>
+            </li>
+          <% };
+          if(vegan){ %>
+            <li class="vegan">
+              <span></span>
+              <div></div>
+            </li>
+          <% }; %>
+        </ul>
+      </div>
     </script>
+
+<!-- Menu Icons Template -->
+    <!-- <script id="menu_icons_temp">
+      <li>
+        <span></span>
+        <div></div>
+      </li>
+    </script> -->
 
 <!-- Photo template -->
     <script id='template_photos' type='text/template'>

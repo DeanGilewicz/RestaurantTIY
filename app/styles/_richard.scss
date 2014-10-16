@@ -56,10 +56,48 @@ $cursive: 'Miss Fajardose', cursive;
     float: right;
 
     li {
+      position: relative;
+      display: inline-block;
+
+      &:hover div {
+        display: block;
+      }
+    }
+
+    span {
       display: inline-block;
       width: 15px;
       height: 15px;
+    }
+
+    div {
+      height: 30px;
+      width: 60px;
+      background-color: black;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      display: none;
+    }
+
+/*     .true {
+  display: inline-block;
+} */
+
+    .allergies span {
+      background-color: black;
+    }
+
+    .favorite span {
+      background-color: blue;
+    }
+
+    .spicy span {
       background-color: red;
+    }
+
+    .vegan span {
+      background-color: yellow;
     }
   }
 }
@@ -71,6 +109,7 @@ $cursive: 'Miss Fajardose', cursive;
     margin: 0;
     padding: 0;
   }
+
 
   li {
     width: 100%;

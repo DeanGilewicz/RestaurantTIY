@@ -7,6 +7,9 @@ var special_description;
 var template_menu=$('#template_menu').html();
 var render_menu=_.template(template_menu);
 
+// var menuIconsTemplate=$('#menu_icons_temp').html();
+// var render_IconsTemp=_.template(menuIconsTemplate);
+
 var template_special=$('#template_special').html();
 var render_special=_.template(template_special);
 
@@ -31,28 +34,27 @@ $.getJSON(api_menu).done (function(menu_data){
           special_item = (all.item);
           special_price = (all.price);
           special_description = (all.description);
-      $( document ).ready(function() {
-
-      $('.special_info').append(render_special(special_item));
-    })
+          $( document ).ready(function() {
+            $('.special_info').append(render_special(special_item));
+          })
         }
+
       })
-  })
+
+    })
 
 
     _.each(menu_data.appetizers, function (apps){
       $('.menu_apps').append(render_menu(apps));
-    })
+    });
 
     _.each(menu_data.entrees, function (entree){
-
-    $('.menu_entree').append(render_menu(entree));
-    })
+      $('.menu_entree').append(render_menu(entree));
+    });
 
     _.each(menu_data.sides, function (side){
-
-    $('.menu_sides').append(render_menu(side));
-    })
+      $('.menu_sides').append(render_menu(side));
+    });
 });
 
 
