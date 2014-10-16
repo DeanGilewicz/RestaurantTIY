@@ -33,6 +33,37 @@ $cursive: 'Miss Fajardose', cursive;
   }
 }
 
+// Our Story Tab
+.story {
+
+  img {
+    margin: 20px 0;
+  }
+}
+
+// Menu Icons
+
+.menu_bottom {
+  overflow: auto;
+
+  p {
+    width: 80%;
+    float: left;
+  }
+
+  .menu_icons {
+    width: 19%;
+    float: right;
+
+    li {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: red;
+    }
+  }
+}
+
 // Flickr Photos Section
 .photos {
 
@@ -54,6 +85,7 @@ $cursive: 'Miss Fajardose', cursive;
   padding-left: 0;
   border-bottom: 1px solid lightgrey;
   width: 100%;
+  margin-bottom: 40px;
 
   li {
     display: inline-block;
