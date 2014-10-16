@@ -13,6 +13,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -37,7 +38,7 @@
           <li>Instagram</li>
         </ul>
         <div class="hero-image">
-          <img src="http://placehold.it/1024x300" alt="">
+          <img src="http://placehold.it/1024x400" alt="">
         </div>
       </div>
 
@@ -46,16 +47,20 @@
 
       <div class="middle-section">
         <div class="news">Latest News!</div>
-        <div class="special">Special</div>
+        <!--html for special section -->
+        <div class="special">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nam nostrum veniam a, provident voluptatem, commodi, quisquam repudiandae, ullam beatae non tempore hic! Quidem ut quos, iure cumque placeat expedita.</div>
+        <!--end html for special section -->
+
+      <!-- OUR LOCATION SECTION -->
         <div class="location">
           <h5>Our Location</h5>
-          <div class="google">
+          <div class="google"> <!-- GOOGLE MAPS IFRAME INSERT -->
             <iframe
               width="100%" height="200"
               frameborder="0" style="border:0"
               src="https://www.google.com/maps/embed/v1/place?q=11101%2041st%20Ave%2C%20Flushing%2C%20NY%2011368%2C%20United%20States&key=AIzaSyCrNC4AETKT_7FVqnWvNuUy-fLn9zYTUHc">
             </iframe>
-          </div>
+          </div> <!-- END OF GOOGLE MAPS -->
           <div class="contact">
             <address>11101 41st Ave, Flushing, NY 11368</address>
             <ul>
@@ -66,6 +71,8 @@
           </div>
         </div>
       </div>
+
+      <!-- END OF OUR LOCATION SECTION -->
 
       <!-- END 3 MIDDLE BOXES -->
 
@@ -82,35 +89,75 @@
           <div class="story open">
             Story
           </div>
+<!--html for main menu -->
           <div class="menu">
+            <h2>Our Dinner Selections...</h2>
+            <h3>Appetizers</h3>
             <div class="menu_apps">
             </div>
+
+            <h3>Entrees</h3>
             <div class="menu_entree">
             </div>
+
+            <h3>Sides A La Carte</h3>
             <div class="menu_sides">
             </div>
           </div>
+<!--End of menu section-->
           <div class="reservations">
-            Reservations
-
-            <form class='form'>
-              Full Name
-              <input type="text" name="input_name">
-              Number of Guests
-              <input type="text" name="input_guest">
-              Date
-              <input type="text" name="input_date">
-              Special Notes
-              <input type="text" name="input_notes">
-              Seating Preference
-
-              
-
-
-
-
             </form>
-          </div>
+            <h2>Reservations</h2>
+              <form id="form_id" action="index.html" method="post">
+                <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>:</p>
+                <section>
+                  <h3>Full Name</h3>
+                  <section>
+                    <p>
+                      <label for="name">
+                        <span>Name: </span>
+                        <input type="text" id="name" name="fullName" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="guests">
+                        <span>Number of Guests: </span>
+                        <input type="number" id="guests" name="guestNumber" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="date">
+                        <span>Date:</span>
+                        <input type="text" id="date" name="date" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                  <p>
+                    <label for="specialNotes">
+                      <span>Special Notes:</span>
+                      <input type="text" id="notes" name="specialNotes" />
+                    </label>
+                  </p>
+                </section>
+                <section>
+                  <label for="seatingPreference">
+                    <span>Seating Preference:</span>
+                    <select name="seating" id="seating" >
+                      <option value="chefsTable">Chef's Table</option>
+                      <option value="rooftop">Veranda</option>
+                      <option value="bar">Bar</option>
+                      <option value="indoor">Indoor</option>
+                    </select>
+                  </label>
+                </section>
+                <section>
+                  <input type="submit" value="Submit">
+                </section>
+              </form>
+
+
         </div>
 
         <!-- END TAB SECTION -->
@@ -137,7 +184,7 @@
           </ul>
         </div>
 
-        <!-- FLICKR PHOTOS SECTION -->
+        <!-- END FLICKR PHOTOS SECTION -->
 
       </div> <!-- .bottom -->
 
@@ -146,7 +193,7 @@
       <div class="footer">Copyright 2014 Restaurant Name</div>
 
     </div> <!-- .container -->
-
+<!-- Specials script -->
 
     <!-- This is the news script -->
 
@@ -167,17 +214,14 @@
 
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
-      <div class="menu_section">
-            <h2></h2>
-            <div class="menu_topBox">
-              <h3><%= item %></h3>
+            <div class="menu_top">
+              <h4><%= item %></h4>
               <p><%= price %></p>
             </div>
 
-            <div class="bottomBox">
-              <p><%=description %></p>
+            <div class="menu_bottom">
+              <p><%= description %></p>
             </div>
-      </div>
     </script>
 
 
@@ -192,6 +236,7 @@
 
         <!-- build:js scripts/main.js -->
         <script src='scripts/john.js'></script>
+        <script src="scripts/jquery-ui.min.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

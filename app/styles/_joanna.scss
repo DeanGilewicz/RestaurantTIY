@@ -1,4 +1,39 @@
 .menu {
-  width: 700px;
-  overflow:auto;
+  width: 100%;
+  padding-left: 1%;
+  overflow: auto;
+}
+
+.menu h2 {
+  border-bottom: 1px solid black;
+}
+
+.menu h3 {
+  padding-top: 25px;
+  border-bottom: 1px solid black;
+}
+
+.menu_apps {
+  padding-left: 1%;
+}
+
+.menu_entree {
+  padding-left: 1%;
+}
+
+.menu_sides {
+  padding-left: 1%;
+}
+
+.menu_top {
+  overflow: auto;
+}
+
+.menu_top h4 {
+  float: left;
+}
+
+.menu_top p {
+  float: right;
+  padding-right: 2%;
 }
