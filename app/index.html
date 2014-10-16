@@ -13,9 +13,9 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
-    <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -135,13 +135,20 @@
                         <strong><abbr title="required">*</abbr></strong>
                       </label>
                     </p>
-                  <p>
-                    <label for="specialNotes">
-                      <span>Special Notes:</span>
-                      <input type="text" id="notes" name="specialNotes" />
-                    </label>
-                  </p>
-                </section>
+                    <p>
+                      <label for="time">
+                        <span>Time:</span>
+                        <input type="time" id="time" name="time" min="18:00" max="22:30" required />
+                        <strong><abbr title="required">*</abbr></strong>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="specialNotes">
+                        <span>Special Notes:</span>
+                        <textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea>
+                      </label>
+                    </p>
+                  </section>
                 <section>
                   <label for="seatingPreference">
                     <span>Seating Preference:</span>
@@ -196,9 +203,6 @@
     </script>
 
 
-
-
-
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
             <div class="menu_top">
@@ -226,7 +230,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <script src='scripts/token.js'></script>
+        <!-- // <script src='scripts/token.js'></script> -->
 
         <!-- build:js scripts/main.js -->
         <script src='scripts/john.js'></script>

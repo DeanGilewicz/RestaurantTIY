@@ -55,3 +55,12 @@ $('#reservations').click(function(){
 $(document).ready(function() {
     $('#date').datepicker();
 });
+
+
+// Increeases the text area as user types
+
+function autoGrow (textField) {
+  if (textField.scrollHeight > textField.clientHeight) {
+    textField.style.height = textField.scrollHeight + "px";
+  }
+}
