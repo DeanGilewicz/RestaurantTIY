@@ -50,16 +50,26 @@ $.getJSON(api_menu).done (function(menu_data2){
 
 // Tab Functionality
 $('#story').click(function(){
-  $('.tabs div').removeClass('open');
+  $('.tabs .open').removeClass('open');
+  $(this).addClass('open');
   $('.story').addClass('open');
 });
 
 $('#menu').click(function(){
-  $('.tabs div').removeClass('open');
+  $('.tabs .open').removeClass('open');
+  $(this).addClass('open');
   $('.menu').addClass('open');
 });
 
 $('#reservations').click(function(){
-  $('.tabs div').removeClass('open');
+  $('.tabs .open').removeClass('open');
+  $(this).addClass('open');
   $('.reservations').addClass('open');
+});
+
+
+// Datepicker for reservation form date input
+
+$(document).ready(function() {
+    $('#date').datepicker();
 });
