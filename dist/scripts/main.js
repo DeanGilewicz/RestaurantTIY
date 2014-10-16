@@ -93,7 +93,6 @@ var api_special= 'http://restaurantapi.apiary-mock.com/menu/special';
 var specialID;
 $.getJSON(api_special).done (function(special_data){
   specialID = special_data.menu_item_id;
-});
 
 $.getJSON(api_menu).done (function(menu_data){
 
@@ -127,8 +126,8 @@ $.getJSON(api_menu).done (function(menu_data){
 
     $('.menu_sides').append(render_menu(side));
     })
+})
 });
-
 
 // Tab Functionality
 $('#story').click(function(){
