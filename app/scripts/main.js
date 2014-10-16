@@ -7,6 +7,9 @@ var special_description;
 var template_menu=$('#template_menu').html();
 var render_menu=_.template(template_menu);
 
+// var menuIconsTemplate=$('#menu_icons_temp').html();
+// var render_IconsTemp=_.template(menuIconsTemplate);
+
 var template_special=$('#template_special').html();
 var render_special=_.template(template_special);
 
@@ -30,6 +33,7 @@ $.getJSON(api_menu).done (function(menu_data){
           special_item = (all.item);
           special_price = (all.price);
           special_description = (all.description);
+<<<<<<< HEAD
       $( document ).ready(function() {
 
       $('.special_info').append(render_special(special_item));
@@ -37,21 +41,35 @@ $.getJSON(api_menu).done (function(menu_data){
     }
     })
   })
+=======
+          $( document ).ready(function() {
+            $('.special_info').append(render_special(special_item));
+          })
+        }
+
+      })
+
+    })
+>>>>>>> dev
 
     _.each(menu_data.appetizers, function (apps){
       $('.menu_apps').append(render_menu(apps));
-    })
+    });
 
     _.each(menu_data.entrees, function (entree){
-
-    $('.menu_entree').append(render_menu(entree));
-    })
+      $('.menu_entree').append(render_menu(entree));
+    });
 
     _.each(menu_data.sides, function (side){
+<<<<<<< HEAD
 
     $('.menu_sides').append(render_menu(side));
     })
 })
+=======
+      $('.menu_sides').append(render_menu(side));
+    });
+>>>>>>> dev
 });
 
 // Tab Functionality
@@ -77,7 +95,7 @@ $('#reservations').click(function(){
 // Datepicker for reservation form date input
 
 $(document).ready(function() {
-    $('#date').datepicker();
+    $('#date').datepicker({ minDate: 0 });
 });
 
 
@@ -87,4 +105,38 @@ function autoGrow (textField) {
   if (textField.scrollHeight > textField.clientHeight) {
     textField.style.height = textField.scrollHeight + "px";
   }
-}
+};
+
+
+// Posting form information to api
+
+var url = 'http://tiy-atl-fe-server.herokuapp.com/collections/testpostres';
+
+   // attach a submit handler to the form
+    $('#booking').submit(function(event) {
+
+      // stop form from submitting normally
+      event.preventDefault();
+
+      // Send the data using post
+      var posting = $.post( url, {
+
+        fullName: $('#name').val(),
+        guestNumber: $('#guests').val(),
+        date: $('#date').val(),
+        time: $('#time').val(),
+        notes: $('#notes').val(),
+        guestNumber:$('#guests').val(),
+        seating: $('#seating').val()
+
+      });
+
+      var booked_date = $('#date').val();
+      var booked_time = $('#time').val();
+
+      /* Alerts the results */
+      posting.done(function( data ) {
+        alert('We look forward to seeing you on' + ' ' + booked_date + ' at ' + booked_time + ' pm. ');
+      });
+
+    });

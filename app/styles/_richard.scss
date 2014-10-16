@@ -33,6 +33,75 @@ $cursive: 'Miss Fajardose', cursive;
   }
 }
 
+// Our Story Tab
+.story {
+
+  img {
+    margin: 20px 0;
+  }
+}
+
+// Menu Icons
+
+.menu_bottom {
+  overflow: auto;
+
+  p {
+    width: 80%;
+    float: left;
+  }
+
+  .menu_icons {
+    width: 19%;
+    float: right;
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      &:hover div {
+        display: block;
+      }
+    }
+
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+    }
+
+    div {
+      height: 30px;
+      width: 60px;
+      background-color: black;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      display: none;
+    }
+
+/*     .true {
+  display: inline-block;
+} */
+
+    .allergies span {
+      background-color: black;
+    }
+
+    .favorite span {
+      background-color: blue;
+    }
+
+    .spicy span {
+      background-color: red;
+    }
+
+    .vegan span {
+      background-color: yellow;
+    }
+  }
+}
+
 // Flickr Photos Section
 .photos {
 
@@ -40,6 +109,7 @@ $cursive: 'Miss Fajardose', cursive;
     margin: 0;
     padding: 0;
   }
+
 
   li {
     width: 100%;
@@ -54,6 +124,7 @@ $cursive: 'Miss Fajardose', cursive;
   padding-left: 0;
   border-bottom: 1px solid lightgrey;
   width: 100%;
+  margin-bottom: 40px;
 
   li {
     display: inline-block;
