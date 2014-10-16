@@ -27,6 +27,9 @@ $.getJSON(api_menu).done (function(menu_data){
 
 
 // Specials section
+var special_item;
+var special_price;
+var special_description;
 var template_special=$('#template_special').html();
 var render_special=_.template(template_special);
 
@@ -39,10 +42,13 @@ $.getJSON(api_menu).done (function(menu_data2){
 
   $.getJSON(api_special).done (function(special_data){
 
-    if (all.id == special_data.menu_item_id)
-      console.log(all.item, all.price, all.description);
+    if (all.id == special_data.menu_item_id) {
+      special_item = (all.item);
+      special_price = (all.price);
+      special_description = (all.description);
 
-//  $('.special').append(render_special());
+ $('.special_info').append(render_special(special_item));
+}
 })
 })
 })
