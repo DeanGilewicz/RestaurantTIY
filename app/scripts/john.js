@@ -1,5 +1,5 @@
 
-var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=' + 'e1126579a99d5f23c6802a189f95b9dd' + '&user_id=56199382@N00&per_page=12&page=4&format=json&nojsoncallback=1';          // Flickr API
+var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.photos.search&tags=france,food&tag_mode=all&api_key=' + 'e1126579a99d5f23c6802a189f95b9dd' + '&per_page=6&page=1&format=json&nojsoncallback=1';          // Flickr API
 var api_news = 'http://restaurantapi.apiary-mock.com/news/latest'; //news api
 
 var template_flickr = $('#template_photos').html();
