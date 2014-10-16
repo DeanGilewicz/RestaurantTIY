@@ -58,6 +58,7 @@ $cursive: 'Miss Fajardose', cursive;
     li {
       position: relative;
       display: inline-block;
+      overflow: visible;
 
       &:hover div {
         display: block;
@@ -71,33 +72,45 @@ $cursive: 'Miss Fajardose', cursive;
     }
 
     div {
-      height: 30px;
-      width: 60px;
       background-color: black;
+      color: white;
+      width: auto;
+      padding: 6px 10px;
       position: absolute;
       top: 20px;
-      left: 50%;
+      right: 0;
       display: none;
+      overflow: auto;
+      white-space: pre;
+
+      &::before {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 5px 6px 5px;
+        border-color: transparent transparent #000000 transparent;
+        position: absolute;
+      }
     }
 
-/*     .true {
-  display: inline-block;
-} */
-
     .allergies span {
-      background-color: black;
+      background: url('../images/signal5.svg');
+      background-size: 100%;
     }
 
     .favorite span {
-      background-color: blue;
+      background: url('../images/favorite21.svg');
+      background-size: 100%;
     }
 
     .spicy span {
-      background-color: red;
+      background: url('../images/flame6.svg');
+      background-size: 100%;
     }
 
     .vegan span {
-      background-color: yellow;
+      background: url('../images/broccoli.svg');
+      background-size: 100%;
     }
   }
 }

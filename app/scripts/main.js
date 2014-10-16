@@ -1,4 +1,3 @@
-
 //API variables for menu and specials
 var special_item;
 var special_price;
@@ -6,9 +5,6 @@ var special_description;
 
 var template_menu=$('#template_menu').html();
 var render_menu=_.template(template_menu);
-
-// var menuIconsTemplate=$('#menu_icons_temp').html();
-// var render_IconsTemp=_.template(menuIconsTemplate);
 
 var template_special=$('#template_special').html();
 var render_special=_.template(template_special);
@@ -21,6 +17,7 @@ var api_special= 'http://restaurantapi.apiary-mock.com/menu/special';
 var specialID;
 $.getJSON(api_special).done (function(special_data){
   specialID = special_data.menu_item_id;
+});
 
 $.getJSON(api_menu).done (function(menu_data){
 
@@ -34,13 +31,14 @@ $.getJSON(api_menu).done (function(menu_data){
           special_price = (all.price);
           special_description = (all.description);
 
-      $( document ).ready(function() {
+          $( document ).ready(function() {
+            $('.special_info').append(render_special(special_item));
+          })
+        }
 
-      $('.special_info').append(render_special(special_item));
+      })
+
     })
-    }
-    })
-  })
 
     _.each(menu_data.appetizers, function (apps){
       $('.menu_apps').append(render_menu(apps));
@@ -51,10 +49,8 @@ $.getJSON(api_menu).done (function(menu_data){
     });
 
     _.each(menu_data.sides, function (side){
-
       $('.menu_sides').append(render_menu(side));
     });
-
 });
 
 // Tab Functionality
