@@ -33,7 +33,7 @@ $.getJSON(api_menu).done (function(menu_data){
           special_item = (all.item);
           special_price = (all.price);
           special_description = (all.description);
-<<<<<<< HEAD
+
       $( document ).ready(function() {
 
       $('.special_info').append(render_special(special_item));
@@ -41,16 +41,6 @@ $.getJSON(api_menu).done (function(menu_data){
     }
     })
   })
-=======
-          $( document ).ready(function() {
-            $('.special_info').append(render_special(special_item));
-          })
-        }
-
-      })
-
-    })
->>>>>>> dev
 
     _.each(menu_data.appetizers, function (apps){
       $('.menu_apps').append(render_menu(apps));
@@ -61,15 +51,10 @@ $.getJSON(api_menu).done (function(menu_data){
     });
 
     _.each(menu_data.sides, function (side){
-<<<<<<< HEAD
 
-    $('.menu_sides').append(render_menu(side));
-    })
-})
-=======
       $('.menu_sides').append(render_menu(side));
     });
->>>>>>> dev
+
 });
 
 // Tab Functionality
