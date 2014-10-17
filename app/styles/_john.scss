@@ -10,8 +10,7 @@
 
   .news_box{
     @include margin (1.3em null 1.3em null);
-  }
-
+}
   .news_title{
     font-weight: bold;
   }
@@ -19,6 +18,8 @@
   .news_text{
     text-overflow: ellipsis;
   }
+
+  
 
 }
 
