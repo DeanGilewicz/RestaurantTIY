@@ -33,9 +33,10 @@
           <h1>LOGO</h1>
         </div>
         <ul class="social">
-          <li class="intagram"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTDNOhaQplwBDiQOS-_s2U6lOW0ZRWDs2OFZ9ACgG31JQylI39j" height="30" alt="Instagram"/></li>
-          <li class="twitter"><img src="http://buttonshut.com/links/twitter.png" height="30" alt="Twitter"/></li>
-          <li class="facebook"><img src ="http://buttonshut.com/links/facebook.png" height="30" alt="Facebook"/></li>
+          <li><a target="_blank" href="https://www.instagram.com"><img src="images/vintage2.svg" height="25"/></a></li>
+          <li><a target="_blank" href="https://twitter.com"><img src="images/social.svg" height="25"/></a></li>
+          <li><a target="_blank" href="https://www.opentable.com"><img src="images/studio1.svg" height="25"/></a></li>
+          <li><a target="_blank" href="https://www.facebook.com"><img src="images/facebook29.svg" height="25"/></a></li>
         </ul>
         <h1 class="headline">Fork &amp; Spoon</h1>
       </div>
@@ -121,10 +122,10 @@
             <h2>Reservations</h2>
             <h3>To make a reservation, please complete the form and click submit.</h3>
               <form id="booking" action="" method="post">
-                <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>:</p>
+                <h6>Required fields are followed by <strong><abbr title="required">*</abbr></strong>:</h6>
                 <section>
                   <p>
-                    <label for="name">
+                    <label for="name" class="spacing">
                       <span>Name: </span>
                       <input type="text" id="name" name="fullName" required />
                       <strong><abbr title="required">*</abbr></strong>
@@ -152,26 +153,30 @@
                     </label>
                   </p>
                   <p>
-                    <label for="specialNotes">
+                    <label for="notes">
                       <span>Special Notes:</span>
                       <textarea class="noscrollbars" onkeyup="autoGrow(this);" id="notes" name="notes"></textarea>
                     </label>
                   </p>
                 </section>
                 <section>
-                  <label for="seatingPreference">
-                    <span>Seating Preference:</span>
-                    <select required name="seating" id="seating">
-                      <option value="">Please Select</option>
-                      <option value="chefsTable">Chef's Table</option>
-                      <option value="rooftop">Rooftop</option>
-                      <option value="bar">Bar</option>
-                      <option value="indoor">Indoor</option>
-                    </select>
-                  </label>
+                  <p>
+                    <label for="seating">
+                      <span>Seating Preference:</span>
+                      <select required name="seating" id="seating">
+                        <option value="">Please Select</option>
+                        <option value="chefsTable">Chef's Table</option>
+                        <option value="rooftop">Rooftop</option>
+                        <option value="bar">Bar</option>
+                        <option value="indoor">Indoor</option>
+                      </select>
+                    </label>
+                  </p>
                 </section>
                 <section>
-                  <input type="submit" value="Submit">
+                  <p class="btnCon">
+                    <input type="submit" id="sButton" value="Submit">
+                  </p>
                 </section>
               </form>
           </div>
@@ -225,8 +230,9 @@
                <%= news_title %>
             </h3>
             <p class='news_text'>
-               <%= news_text %>
+              <%= news_text %>
             </p>
+            <p class="read-more"><a href="http://www.peopleofwalmart.com/" class="button">Read More</a></p>
           </div>
     </script>
 
