@@ -13,7 +13,9 @@
   .google {
     margin-bottom: 1%;
     border: 1px solid HSLA(0, 0%, 70%, 1);
+    filter: grayscale(100%);
   }
+
 
   // CONTACT INFORMATION
 
@@ -50,7 +52,48 @@
 
 // END OF LOCATION LOCATION SECTION CONTAINER
 
-// TEXTAREA FOR RESERVATION FORM - SPECIAL NOTES
+
+// RESERVATION TAB LAYOUT
+
+#booking {
+  width: 50%;
+  padding: 5%;
+  color: white;
+  background-color: black;
+
+  h6 {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 30px auto 10px auto;
+  }
+
+  #name, #guests, #date, #time, #notes, #seating {
+    width: 95%
+  }
+
+  .btnCon {
+    margin-top: 30px;
+    text-align: center;
+    color: black;
+  }
+
+  #sButton {
+    height: 25px;
+    width: 50%;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+}
+
+  // TEXTAREA FOR RESERVATION FORM - SPECIAL NOTES
 
 .noscrollbars {
   overflow: hidden;
@@ -59,7 +102,7 @@
 }
 
 
-// DATEPICKER
+  // DATEPICKER
 
 /*! jQuery UI - v1.11.1 - 2014-10-16
 * http://jqueryui.com
