@@ -71,6 +71,12 @@ $('#reservations').click(function(){
   $('.reservations').addClass('open');
 });
 
+$('#comments').click(function(){
+  $('.tabs .open').removeClass('open');
+  $(this).addClass('open');
+  $('.comments').addClass('open');
+});
+
 
 // Datepicker for reservation form date input
 
@@ -106,7 +112,6 @@ var url = 'http://tiy-atl-fe-server.herokuapp.com/collections/testpostres';
         date: $('#date').val(),
         time: $('#time').val(),
         notes: $('#notes').val(),
-        guestNumber:$('#guests').val(),
         seating: $('#seating').val()
 
       });
@@ -118,5 +123,8 @@ var url = 'http://tiy-atl-fe-server.herokuapp.com/collections/testpostres';
       posting.done(function( data ) {
         alert('We look forward to seeing you on' + ' ' + booked_date + ' at ' + booked_time + ' pm. ');
       });
+
+      // Clear the value of each box after submit form.
+      $("#booking")[0].reset();
 
     });
