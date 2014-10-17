@@ -1,39 +1,100 @@
+.special {
+  border: 1px solid gray;
+}
+
+.special h2{
+  padding-top: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
+  border-bottom: 1px solid gray;
+}
+
+.special img {
+  padding-top: 20px;
+  margin-right: 4%;
+  margin-left: 8%;
+}
+
+.special_info {
+  width: 100%;
+  overflow: auto;
+}
+
+.special_items_top h3 {
+  float: left;
+  padding-left: 4%;
+}
+
+.special_items_top p {
+  float: right;
+  padding-top: 5px;
+  padding-right: 4%;
+}
+
+.special_items_bottom p {
+  float: right;
+  padding-left: 4%;
+  padding-bottom: 12px;
+}
+//dots
+.special_items_top:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 23px;
+  border-bottom: 1px dotted black;
+}
+
+//styling for menu
 .menu {
   width: 100%;
   padding-left: 1%;
   overflow: auto;
 }
 
-.menu h2 {
+.menu h1 {
   border-bottom: 1px solid black;
 }
 
-.menu h3 {
+.menu h2 {
   padding-top: 25px;
   border-bottom: 1px solid black;
 }
 
 .menu_apps {
   padding-left: 1%;
+  font-size: 12px;
 }
 
 .menu_entree {
   padding-left: 1%;
+  font-size: 12px;
 }
 
 .menu_sides {
   padding-left: 1%;
+  font-size: 12px;
 }
 
 .menu_top {
   overflow: auto;
 }
 
-.menu_top h4 {
+.menu_top h3 {
   float: left;
+  margin-bottom: 0px;
 }
 
 .menu_top p {
   float: right;
-  padding-right: 2%;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+//the dots
+.menu_top:after {
+	content: "";
+	display: block;
+	overflow: hidden;
+	height: 23px;
+	border-bottom: 1px dotted black;
 }
