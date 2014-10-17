@@ -66,10 +66,12 @@ var secret;
 
           })
 
-});
-
 //var special_photo = 'https://farm' + farm_id +'.staticflickr.com/' + server_id + '/' + id + '_' + secret + '_m.jpg';
 
 //console.log(special_photo);
+
+});
+
+
 
 //$('.special_photo').append(render_specialphoto());

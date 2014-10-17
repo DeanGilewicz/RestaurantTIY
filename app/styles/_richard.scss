@@ -2,22 +2,34 @@ $cursive: 'Miss Fajardose', cursive;
 
 // Hero Image
 
-.hero-image {
-  height: 400px;
-  overflow: hidden;
-  position: relative;
+.branding {
+  background-image: url('../images/header-img1.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 40px;
+
+  .header {
+    height: 100%;
+    padding: 3% 0;
+  }
 
   h1 {
+    margin: 0;
+  }
+
+  .logo {
+    color: #fff;
+  }
+
+  .headline {
     font-family: $cursive;
-    font-size: 6em;
-    position: absolute;
-    top: 300px;
-    left: 60px;
+    font-size: 10em;
     text-align: center;
-    margin: auto;
-    height: auto;
     color: #fff;
     opacity: 0.8;
+    position: absolute;
+    top:60%;
   }
 }
 
