@@ -37,7 +37,7 @@ img {
     @include span-columns(3);
     @include shift(6);
     @include omega();
-    background-color: blue;
+    list-style: none;
   }
 
   .hero-image {
