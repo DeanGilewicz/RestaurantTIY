@@ -9,8 +9,8 @@ var render_menu=_.template(template_menu);
 var template_special=$('#template_special').html();
 var render_special=_.template(template_special);
 
-var api_menu='http://restaurantapi.apiary-mock.com/menu';
-var api_special= 'http://restaurantapi.apiary-mock.com/menu/special';
+var api_menu='http://private-2d011-restaurantapi.apiary-mock.com/menu';
+var api_special= 'http://private-2d011-restaurantapi.apiary-mock.com/menu/special';
 
 
 //Main menu & specials jquery for template

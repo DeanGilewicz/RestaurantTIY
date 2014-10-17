@@ -3,7 +3,7 @@ var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.photos.se
 
 // Flickr API uses method photos.search, uses license key = 7-No known copyright restrictions.
 
-var api_news = 'http://restaurantapi.apiary-mock.com/news/latest'; //news api
+var api_news = 'http://private-2d011-restaurantapi.apiary-mock.com/news/latest'; //news api
 
 var template_flickr = $('#template_photos').html();
 var render_flickr = _.template(template_flickr);
