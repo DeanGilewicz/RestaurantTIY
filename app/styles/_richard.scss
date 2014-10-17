@@ -4,6 +4,7 @@ $cursive: 'Miss Fajardose', cursive;
 
 .branding {
   background-image: url('../images/header-img1.jpg');
+  background-color: black;
   background-size: 100%;
   width: 100%;
   height: 500px;
@@ -168,4 +169,14 @@ $cursive: 'Miss Fajardose', cursive;
     border-left: 1px solid lightgrey; border-right: 1px solid lightgrey; border-top: 1px solid lightgrey;
     border-bottom: 1px solid #fff;
   }
+}
+
+// Footer
+.footer {
+  height: 60px;
+  background-image: url('../images/header-img1.jpg');
+  background-color: black;
+  background-size: 100%;
+  color: #fff;
+  width: 100%;
 }
