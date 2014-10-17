@@ -9,6 +9,7 @@
 @import 'john';
 
 @import 'fonts';
+@import 'colors';
 
 // Custom Styles
 body {
@@ -17,8 +18,18 @@ body {
   font-size: 62.5%;
 }
 
+ul {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
+}
+
+h5 {
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0 0 10px 0;
 }
 
 .container {
@@ -37,23 +48,26 @@ img {
     @include span-columns(3);
     @include shift(6);
     @include omega();
-    background-color: blue;
   }
 
   .hero-image {
     @include span-columns(12);
+    margin-bottom: 40px;
   }
 
 // 3 MIDDLE MODULES
   .middle-section {
     @include span-columns(12);
     @include omega(3n);
+    margin-bottom: 40px;
+
     @include media($mobile) {
       @include span-columns(6);
     }
 
     .news {
       @include span-columns(4 of 12);
+
       @include media($mobile) {
         @include span-columns(6 of 6);
       }
@@ -61,6 +75,7 @@ img {
 
     .special {
       @include span-columns(4 of 12);
+
       @include media($mobile) {
         @include span-columns(6 of 6);
       }
@@ -68,10 +83,17 @@ img {
 
     .location {
       @include span-columns(4 of 12);
+
       @include media($mobile) {
         @include span-columns(6 of 6);
       }
     }
+  }
+
+  .middle-section > div {
+    border: 1px solid $grey;
+    height: 300px;
+    padding: 1.6%;
   }
 
 // BOTTOM

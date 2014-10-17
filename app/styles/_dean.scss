@@ -1,18 +1,17 @@
 // LOCATION SECTION CONTAINER
 
 .location {
-  border: 1px solid HSLA(0, 0%, 70%, 1);
   background-color: HSLA(0, 0%, 100%, 1);
 
   h5 {
     font-size: 1.4em;
-    margin: 2% 0% 2% 5%;
+    margin: 0;
   }
 
   // GOOGLE MAP
 
   .google {
-    margin: 2% 5%;
+    margin-bottom: 1%;
     border: 1px solid HSLA(0, 0%, 70%, 1);
   }
 
@@ -23,21 +22,23 @@
 
     address {
       font-size: 1em;
-      text-align: center;;
+      text-align: center;
+      margin-bottom: 6px;
     }
 
     ul {
       overflow: auto;
       padding-left: 0;
+      text-align: center;
     }
 
     li {
-      float: left;
-      width: 24%;
+      display: inline-block;
+      width: 28%;
       text-align: center;
       font-size: 0.8em;
       list-style-type: none;
-      margin: 0% 4%;
+      margin: 0% 2%;
 
       &:nth-child(2) {
         border-right: 1px solid HSLA(0, 0%, 70%, 1);
