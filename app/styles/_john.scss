@@ -1,6 +1,7 @@
 .news {
 
   overflow: hidden;
+  text-overflow: ellipsis;
   @include padding (0em 2% 0em 2%);
 
   li {
@@ -9,15 +10,16 @@
 
   .news_box{
     @include margin (1.3em null 1.3em null);
-  }
-
+}
   .news_title{
     font-weight: bold;
   }
 
   .news_text{
-
+    text-overflow: ellipsis;
   }
+
+  
 
 }
 
@@ -29,8 +31,14 @@
 
 img {
   border: 0.1em solid black;
-  border-radius: 0.5em;
-  opacity: 0.5
+  border-radius: 0.18em;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+li:hover img{
+    filter: none;
 }
 
 }
