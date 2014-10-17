@@ -29,8 +29,11 @@
 
 img {
   border: 0.1em solid black;
-  border-radius: 0.5em;
-  opacity: 0.5
+  border-radius: 0.18em;
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+
 }
 
 }
