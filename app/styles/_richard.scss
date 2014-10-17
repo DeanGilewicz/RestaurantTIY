@@ -11,7 +11,7 @@ $cursive: 'Miss Fajardose', cursive;
     font-family: $cursive;
     font-size: 6em;
     position: absolute;
-    bottom: 20px;
+    top: 300px;
     left: 60px;
     text-align: center;
     margin: auto;
@@ -54,11 +54,13 @@ $cursive: 'Miss Fajardose', cursive;
   .menu_icons {
     width: 19%;
     float: right;
+    overflow: visible;
 
     li {
       position: relative;
       display: inline-block;
       overflow: visible;
+      margin-bottom: 6px;
 
       &:hover div {
         display: block;
@@ -77,19 +79,22 @@ $cursive: 'Miss Fajardose', cursive;
       width: auto;
       padding: 6px 10px;
       position: absolute;
-      top: 20px;
-      right: 0;
+      top: 24px;
+      right: -4px;
       display: none;
-      overflow: auto;
       white-space: pre;
 
-      &::before {
+      &::after {
+        content:"";
+        display: block;
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 0 5px 6px 5px;
+        border-width: 0 5px 5px 5px;
         border-color: transparent transparent #000000 transparent;
         position: absolute;
+        top: -5px;
+        right: 7px;
       }
     }
 

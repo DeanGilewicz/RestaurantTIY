@@ -2,7 +2,6 @@
 
   overflow: hidden;
   @include padding (0em 2% 0em 2%);
-  background: #dddddd;
 
   li {
     list-style-type: none;
@@ -14,11 +13,24 @@
 
   .news_title{
     font-weight: bold;
-    border-top: 0.1em solid blue;
   }
 
   .news_text{
 
   }
+
+}
+
+.photos{
+
+  text-align: center;
+  font-style: italic;
+  font-size: 1.6em;
+
+img {
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+  opacity: 0.5
+}
 
 }

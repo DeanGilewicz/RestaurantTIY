@@ -7,20 +7,12 @@
 
 //daily specials section
 .special {
-  border: 1px solid gray;
 }
 
-.special h2{
-  padding-top: 10px;
-  margin-right: 4%;
-  margin-left: 4%;
-  border-bottom: 1px solid gray;
+.special h5{
 }
 
 .special img {
-  padding-top: 20px;
-  margin-right: 4%;
-  margin-left: 8%;
 }
 
 .special_info {
@@ -30,7 +22,6 @@
 
 .special_items_top h3 {
   float: left;
-  padding-left: 4%;
 }
 
 .special_items_top p {
@@ -41,8 +32,6 @@
 
 .special_items_bottom p {
   float: right;
-  padding-left: 4%;
-  padding-bottom: 12px;
 }
 //dots
 .special_items_top:after {
@@ -71,17 +60,14 @@
 
 .menu_apps {
   padding-left: 1%;
-  font-size: 12px;
 }
 
 .menu_entree {
   padding-left: 1%;
-  font-size: 12px;
 }
 
 .menu_sides {
   padding-left: 1%;
-  font-size: 12px;
 }
 
 .menu_top {
