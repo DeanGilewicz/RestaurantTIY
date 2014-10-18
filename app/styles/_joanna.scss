@@ -53,6 +53,13 @@ $courses: 'Josefin Slab', serif;
   border-bottom: 1px dotted black;
 }
 
+//story styling
+
+.story p {
+  font-family: $courses;
+  font-size: 16px;
+}
+
 //styling for menu
 .menu {
   width: 100%;
