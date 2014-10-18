@@ -14,7 +14,7 @@
     <!-- endbuild -->
 
     <link href='http://fonts.googleapis.com/css?family=Miss+Fajardose' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -54,7 +54,7 @@
 
         <div class="special">
           <h5>Today's Special</h5>
-          <img src='http://placekitten.com/g/400/200'/>
+          <img src='http://www.section-33.com/file/2013/12/cr4.jpg' width:'40%' height:"100px"/>
           <div class="special_info">
           </div>
         </div>
@@ -98,23 +98,25 @@
             <li id="comments">Comments</li>
           </ul>
           <div class="story open">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit in, laboriosam voluptatum mollitia a illo blanditiis quibusdam aliquid, explicabo perferendis libero? Rem a, excepturi facere doloribus aut qui, deleniti dolore!</p>
+            <p>Fork & Spoon is an inviting neighborhood cafe located in Flushing, NY that got its start as a pop-up kitchen offering an alternative to coding students who were looking for something more than a steady a diet of burritos, ramen and chips. </p>
             <img src="images/story.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat optio iusto veniam, molestiae ullam labore neque quae cumque earum! Aspernatur iusto, tempore, rerum numquam quaerat libero aliquid molestias reiciendis quod?</p>
+            <p> We are focused on offering great food, a comfortable atmosphere and friendly service. We serve dinner Tuesday through Saturday, and are proud to offer a menu featuring local and regional ingredients. We also invite you to sample our extensive craft beer and wine selection. </p>
           </div>
 <!--html for main menu -->
           <div class="menu">
-            <h5>Our Dinner Selections...</h5>
-              <h3>Appetizers</h3>
-                <div class="menu_apps">
-                </div>
+            <div class="selections"><em>Our Dinner Selections...</em></div>
+                <div class="menu_items">
+                  <p class="courses">Appetizers</p>
+                    <div class="menu_apps">
+                    </div>
 
-              <h3>Entrees</h3>
-                <div class="menu_entree">
-                </div>
+                  <p class="courses">Entrees</p>
+                    <div class="menu_entree">
+                    </div>
 
-              <h3>Sides A La Carte</h3>
-                <div class="menu_sides">
+                  <p class="courses">Sides A La Carte</p>
+                    <div class="menu_sides">
+                    </div>
                 </div>
           </div>
 <!--End of menu section-->
@@ -216,7 +218,6 @@
       <div class="footer">Copyright 2014 Fork & Spoon</div>
 
     </div> <!-- .container -->
-<!-- Specials script -->
 
     <!-- This is the news script -->
 
@@ -246,7 +247,7 @@
 <!--Main menu template -->
     <script id="template_menu" type="text/template">
             <div class="menu_top">
-              <h3><%= item %></h3>
+              <strong><%= item %></strong>
               <p><%= price %></p>
             </div>
 

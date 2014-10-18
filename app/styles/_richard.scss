@@ -64,11 +64,13 @@ $cursive: 'Miss Fajardose', cursive;
   }
 
   .menu_icons {
-    width: 19%;
+    width: 15%;
+    padding-left: 5px;
     float: right;
     overflow: visible;
 
     li {
+      float: right;
       position: relative;
       display: inline-block;
       overflow: visible;

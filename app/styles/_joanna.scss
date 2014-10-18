@@ -1,3 +1,12 @@
+$courses: 'Josefin Slab', serif;
+
+@mixin menu ($fs) {
+  border-bottom: 1px solid gray;
+  font-family: $courses;
+  font-size: $fs;
+  font-style: bold;
+}
+
 //social buttons
 .social li {
   float: right;
@@ -23,6 +32,7 @@
 
 .special_items_top h3 {
   float: left;
+  margin-bottom: 3px;
 }
 
 .special_items_top p {
@@ -46,17 +56,24 @@
 //styling for menu
 .menu {
   width: 100%;
-  padding-left: 1%;
+  height: 650px;
   overflow: auto;
 }
 
-.menu h1 {
-  border-bottom: 1px solid black;
+.container .bottom .tabs .menu .selections {
+  @include menu (22px);
+  margin-bottom: 0px;
 }
 
-.menu h2 {
-  padding-top: 25px;
-  border-bottom: 1px solid black;
+.menu_items {
+  position: relative;
+  width: 98%;
+  padding-left: 1%;
+}
+
+.menu .courses {
+  @include menu (20px);
+  padding-top: 20px;
 }
 
 .menu_apps {
@@ -72,20 +89,27 @@
 }
 
 .menu_top {
-  overflow: auto;
-}
-
-.menu_top h3 {
-  float: left;
-  margin-bottom: 0px;
-}
-
-.menu_top p {
-  float: right;
   padding-top: 11px;
-  margin-bottom: 0px;
-  font-size: 12px;
+  overflow: auto;
+
+  strong {
+    float: left;
+    padding-top: 10px;
+    padding-right: 1%;
+    margin-bottom: 0px;
+    font-size: 13px;
+    font-weight: bold;
+    }
+
+  p {
+    float: right;
+    padding-top: 11px;
+    padding-left: 1%;
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
 }
+
 //the dots
 .menu_top:after {
 	content: "";
@@ -93,4 +117,14 @@
 	overflow: hidden;
 	height: 23px;
 	border-bottom: 1px dotted black;
+}
+
+.container .bottom .tabs .menu_bottom {
+  margin-bottom: 5px;
+}
+
+.menu_bottom p {
+  width: 85%;
+  padding-right: 10px;
+  border-right: 1px solid gray;
 }
