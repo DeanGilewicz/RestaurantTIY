@@ -16,12 +16,15 @@ $courses: 'Josefin Slab', serif;
 //daily specials section
 .special {
   background-color: HSLA(207, 10%, 92%, 1);
+  overflow: auto;
 }
 
 .special h5{
 }
 
 .special img {
+  width: 100%;
+  height: 130px;
 }
 
 .special_info {
@@ -31,6 +34,7 @@ $courses: 'Josefin Slab', serif;
 
 .special_items_top h3 {
   float: left;
+  padding-right: 1%;
   margin-bottom: 3px;
 }
 
@@ -38,6 +42,7 @@ $courses: 'Josefin Slab', serif;
   float: right;
   padding-top: 11px;
   padding-right: 4%;
+  padding-left: 1%;
 }
 
 .special_items_bottom p {
@@ -66,8 +71,7 @@ $courses: 'Josefin Slab', serif;
   overflow: auto;
 }
 
-.container .bottom .tabs .menu .selections {
-  @include menu (22px);
+.menu h5{
   margin-bottom: 0px;
 }
 
@@ -80,18 +84,6 @@ $courses: 'Josefin Slab', serif;
 .menu .courses {
   @include menu (20px);
   padding-top: 20px;
-}
-
-.menu_apps {
-  padding-left: 1%;
-}
-
-.menu_entree {
-  padding-left: 1%;
-}
-
-.menu_sides {
-  padding-left: 1%;
 }
 
 .menu_top {
@@ -118,11 +110,23 @@ $courses: 'Josefin Slab', serif;
 
 //the dots
 .menu_top:after {
-	content: "";
-	display: block;
-	overflow: hidden;
-	height: 23px;
-	border-bottom: 1px dotted black;
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 23px;
+  border-bottom: 1px dotted black;
+}
+
+.menu_apps {
+  padding-left: 1%;
+}
+
+.menu_entree {
+  padding-left: 1%;
+}
+
+.menu_sides {
+  padding-left: 1%;
 }
 
 .container .bottom .tabs .menu_bottom {

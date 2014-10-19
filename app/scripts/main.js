@@ -31,9 +31,8 @@ $.getJSON(api_menu).done (function(menu_data){
           special_price = (all.price);
           special_description = (all.description);
 
-          $( document ).ready(function() {
             $('.special_info').append(render_special(special_item));
-          })
+
         }
 
       })
