@@ -69,7 +69,7 @@
   input, select, textarea {
     border-radius: 0.2em;
     border: 1px solid HSLA(0, 0%, 83%, 1);
-    padding-left: 20px;
+    padding: 0 16px;
   }
 
   input, select {
@@ -78,6 +78,7 @@
 
   textarea {
     height: 160px;
+    padding: 16px;
   }
 
   span {

@@ -14,6 +14,10 @@ $cursive: 'Miss Fajardose', cursive;
     height: 300px;
   }
 
+  @media (max-width: 450px) {
+    background-size: auto 100%;
+  }
+
   background-image: url('../images/header-img1.jpg');
   background-size: 100%;
   width: 100%;
