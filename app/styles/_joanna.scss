@@ -121,14 +121,30 @@ $courses: 'Josefin Slab', serif;
 
 .menu_apps {
   padding-left: 1%;
+
+  .menu_bottom {
+    min-height: 48px;
+  }
 }
 
 .menu_entree {
   padding-left: 1%;
+
+  .menu_bottom {
+    min-height: 48px;
+  }
 }
 
 .menu_sides {
   padding-left: 1%;
+
+  .menu_bottom {
+    height: 10px;
+  }
+}
+
+.container .bottom .tabs .menu_entree {
+  margin-bottom: 0px;
 }
 
 .container .bottom .tabs .menu_bottom {
@@ -139,8 +155,4 @@ $courses: 'Josefin Slab', serif;
   width: 85%;
   padding-right: 10px;
   border-right: 1px solid gray;
-}
-
-.menu_bottom {
-  min-height: 48px;
 }
