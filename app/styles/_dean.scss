@@ -1,12 +1,7 @@
 // LOCATION SECTION CONTAINER
 
 .location {
-  background-color: HSLA(0, 0%, 100%, 1);
-
-  h5 {
-    font-size: 1.4em;
-    margin: 0;
-  }
+  background-color: HSLA(207, 10%, 92%, 1);
 
   // GOOGLE MAP
 
@@ -42,6 +37,10 @@
       list-style-type: none;
       margin: 0% 2%;
 
+      a {
+        color: black;
+      }
+
       &:nth-child(2) {
         border-right: 1px solid HSLA(0, 0%, 70%, 1);
         border-left: 1px solid HSLA(0, 0%, 70%, 1);
@@ -50,16 +49,18 @@
   }
 }
 
-// END OF LOCATION LOCATION SECTION CONTAINER
+// END OF LOCATION SECTION CONTAINER
 
 
 // RESERVATION TAB LAYOUT
 
 #booking {
-  width: 50%;
+  width: 100%;
+  margin-top: 25px;
   padding: 5%;
-  color: white;
-  background-color: black;
+  color: black;
+  border-radius: 0.2em;
+  background-color: HSLA(210, 10%, 92%, 1);
 
   h6 {
     margin-top: 0px;
@@ -69,7 +70,6 @@
   span {
     display: block;
     font-size: 1.1em;
-    text-transform: uppercase;
     margin: 30px auto 10px auto;
   }
 
@@ -78,17 +78,21 @@
   }
 
   .btnCon {
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
     color: black;
   }
 
   #sButton {
-    height: 25px;
+    height: 35px;
     width: 50%;
+    border: none;
+    border-radius: 0.2em;
+    background-color: HSLA(0, 0%, 83%, 1);
 
     &:hover {
-      background-color: gray;
+      background-color: black;
+      color: white;
     }
   }
 }

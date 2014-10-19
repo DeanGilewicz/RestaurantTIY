@@ -2,9 +2,9 @@
 
 The following students participated in this project.
 
-* Richard Daniel - http://link_to_github_profile
-* Dean Gilewicz - http://link_to_github_profile
-* Joanna Edgell - http://link_to_github_profile
+* Richard Daniel - https://GitHub.com/rdanieldesign
+* Dean Gilewicz - https://github.com/DeanGilewicz
+* Joanna Edgell - https://github.com/JoEdge
 * John Crocker - https://github.com/gt7348b
 
 ## We used three API's to create this site
@@ -22,4 +22,9 @@ This project is fictional. There is no real client. Any similarity is purely a c
 
 ## Other Resources
 
-_List any other resources you may use in this project._
+These are additional resources the team used in creating this site:
+
+Flat Icons:  http://www.flaticon.com/
+Date Picker:  jqueryul.com for calendat
+Font pictures jquery-carousel (kevin sylvestre)
+Comment Section: Disqus https://disqus.com/
