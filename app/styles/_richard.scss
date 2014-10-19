@@ -2,7 +2,7 @@ $cursive: 'Miss Fajardose', cursive;
 
 // Hero Image
 
-.branding {
+.branding, .branding2 {
   background-image: url('../images/header-img1.jpg');
   background-size: 100%;
   width: 100%;
@@ -13,6 +13,10 @@ $cursive: 'Miss Fajardose', cursive;
   .header {
     height: 100%;
     padding: 3% 0;
+
+    img {
+      max-width: 90%;
+    }
   }
 
   h1 {
@@ -28,6 +32,10 @@ $cursive: 'Miss Fajardose', cursive;
     position: absolute;
     top:60%;
   }
+}
+
+.branding2 {
+  background-image: url('../images/header-img2.jpg');
 }
 
 // Tab Functionality
