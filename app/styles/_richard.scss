@@ -5,6 +5,11 @@ $cursive: 'Miss Fajardose', cursive;
 .branding,
 .branding2,
 .branding3 {
+
+  @media (max-width: 750px) {
+    height: 400px;
+  }
+
   background-image: url('../images/header-img1.jpg');
   background-size: 100%;
   width: 100%;
@@ -19,6 +24,7 @@ $cursive: 'Miss Fajardose', cursive;
     img {
       max-width: 90%;
     }
+
   }
 
   h1 {
@@ -174,9 +180,7 @@ $cursive: 'Miss Fajardose', cursive;
 // Tab Header
 .tab-header {
   padding-left: 0;
-  border-bottom: 1px solid HSLA(0, 0%, 83%, 1);
   width: 100%;
-  margin-bottom: 10px;
   background-color: HSLA(210, 10%, 92%, 1);
 
   li {
@@ -187,6 +191,8 @@ $cursive: 'Miss Fajardose', cursive;
     text-align: center;
     font-size: 1.8em;
     border-radius: 0.2em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     transition: background-color 0.5s ease;
 
     &:hover {
@@ -201,6 +207,10 @@ $cursive: 'Miss Fajardose', cursive;
     border-right: 1px solid HSLA(0, 0%, 83%, 1);
     border-top: 1px solid HSLA(0, 0%, 83%, 1);
     border-bottom: 1px solid HSLA(200, 6%, 90%, 1);
+
+    &:hover {
+      color: black;
+    }
   }
 }
 
