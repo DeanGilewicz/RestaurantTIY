@@ -15,6 +15,7 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  background-color: HSLA(203, 6%, 90%, 1);
   font-size: 62.5%;
 }
 
@@ -27,9 +28,13 @@ img {
 }
 
 h5 {
-  font-size: 1.4em;
-  margin: 0;
-  padding: 0 0 10px 0;
+  margin: 0 0 20px 0;
+  padding: 2%;
+  background-color: black;
+  border-radius: 0.2em;
+  text-align: center;
+  font-size: 1.3em;
+  color: white;
 }
 
 h3 {
@@ -46,20 +51,20 @@ p {
 .container {
   @include outer-container;
   $mobile: new-breakpoint(max-width 600px 6);
+  overflow: auto;
   max-width: 960px;
   padding: 0 20px;
-  overflow: auto;
   position: relative;
 
 // BRANDING
   .logo {
-    @include span-columns(3);
+    @include span-columns(6);
   }
 
   .social {
     @include span-columns(3);
-    @include shift(6);
     @include omega();
+    float: right;
   }
 
 // 3 MIDDLE MODULES
@@ -101,12 +106,12 @@ p {
     height: 300px;
     margin-bottom: 40px;
     padding: 1.6%;
-    overflow: scroll;
   }
 
 // BOTTOM
   .bottom {
     @include span-columns(12);
+    clear: both;
 
 // TABS
 
