@@ -21,6 +21,7 @@ body {
 
 ul {
   margin: 0;
+  padding: 0;
 }
 
 li {
@@ -76,6 +77,10 @@ p {
   padding: 0 20px;
   position: relative;
 
+  @media (max-width: 450px) {
+    padding: 0;
+  }
+
 
 // 3 MIDDLE MODULES
   .middle-section {
@@ -118,12 +123,20 @@ p {
     padding: 0 1.6% 1.6% 1.6%;
     border-radius: 0.2em;
     background-color: HSLA(207, 10%, 92%, 1);
+    transition: background-color 0.5s ease;
+
+    @media (max-width: 600px) {
+      height: auto;
+      padding: 0 2% 2% 2%;
+    }
 
     &:hover {
       background-color: HSLA(207, 10%, 95%, 1);
+      transition: background-color 0.5s ease;
 
       h5 {
         background-color: $red;
+        transition: background-color 0.5s ease;
       }
     }
 
@@ -153,6 +166,7 @@ p {
     .tabs {
       @include span-columns(9 of 12);
       background-color: HSLA(210, 10%, 92%, 1);
+      transition: background-color 0.5s ease;
 
 
       @include media($mobile) {
@@ -165,13 +179,16 @@ p {
 
       &:hover {
         background-color: HSLA(207, 10%, 95%, 1);
+        transition: background-color 0.5s ease;
 
         .open {
           background-color: HSLA(207, 10%, 95%, 1);
+          transition: background-color 0.5s ease;
         }
 
         h5 {
           background-color: $red;
+          transition: background-color 0.5s ease;
         }
       }
     }
