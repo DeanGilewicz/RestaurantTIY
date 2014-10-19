@@ -29,40 +29,40 @@ $cursive: 'Miss Fajardose', cursive;
     height: 100%;
     padding: 3% 0;
 
+    h1 {
+      color: white;
+      display: inline-block;
+      width: 100%;
+      background-color: HSLA(6, 78%, 57%, .4);;
+    }
+
     img {
       max-width: 90%;
     }
-
-  }
-
-  h1 {
-    margin: 50px 0 0 0;
   }
 
   .headline {
     font-family: $cursive;
-    font-size: 10em;
     text-align: center;
-    color: #fff;
-    opacity: 0.8;
     position: absolute;
     top:60%;
+    left: 0;
+    right: 0;
   }
 }
 
 .branding2 {
   background-image: url('../images/header-img2.jpg');
 
-  .headline {
+  .header h1 {
     color: black;
   }
 }
 
 .branding3 {
   background-image: url('../images/header-img3.jpg');
-  color: black;
 
-  .headline {
+  .header h1 {
     color: black;
   }
 }
