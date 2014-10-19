@@ -14,9 +14,22 @@
     font-weight: bold;
   }
 
-  .read-more a {
-    color: black;
+  .news_content{
+     max-height: 25em;
+	   position: relative;
+	   overflow: hidden;
+
+    .read-more {
+      color: black;
+      position: absolute;
+	    bottom: 0; left: 0;
+	    width: 100%;
+	    text-align: center;
+      padding-bottom: 1em;
+    }
   }
+
+
 }
 
 .special {
