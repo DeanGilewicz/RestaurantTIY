@@ -51,6 +51,8 @@ p {
   line-height: 1.4em;
 }
 
+
+
 .container {
   @include outer-container;
   $medium: new-breakpoint(max-width 750px 12);
@@ -115,6 +117,16 @@ p {
     margin-bottom: 40px;
     padding: 0 1.6% 1.6% 1.6%;
     border-radius: 0.2em;
+    background-color: HSLA(207, 10%, 92%, 1);
+
+    &:hover {
+      background-color: HSLA(207, 10%, 95%, 1);
+    }
+
+    &:hover .google {
+      filter: grayscale(0);
+    }
+
   }
 
   .middle-section h5 {
