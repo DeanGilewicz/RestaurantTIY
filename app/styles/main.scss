@@ -23,8 +23,24 @@ ul {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   max-width: 100%;
+}
+
+h1 {
+  font-size: 12em;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
 
 h5 {
@@ -57,24 +73,20 @@ p {
   @include outer-container;
   $medium: new-breakpoint(max-width 750px 12);
   $mobile: new-breakpoint(max-width 600px 6);
-  overflow: auto;
   max-width: 960px;
+  width: 100%;
   padding: 0 20px;
   position: relative;
 
 // BRANDING
   .logo {
-    @include span-columns(6);
+    @include span-columns(3);
   }
 
   .social {
-    @include span-columns(3);
-    @include omega();
-    float: right;
-
-    li img {
-      background-color: #fff;
-    }
+    position: absolute;
+    top: 8%;
+    right: 8%;
   }
 
 // 3 MIDDLE MODULES
