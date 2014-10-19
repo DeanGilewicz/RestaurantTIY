@@ -1,6 +1,6 @@
 $cursive: 'Miss Fajardose', cursive;
 $grey: lightgrey;
-$red-50: HSLA(6, 78%, 57%, .6);
+$red-50: HSLA(6, 78%, 57%, .7);
 $red: HSLA(6, 78%, 57%, 1);
 
 // Hero Image
@@ -40,8 +40,12 @@ $red: HSLA(6, 78%, 57%, 1);
     }
 
     .logo {
-      width: 200px;
+      width: 160px;
       float: left;
+
+      @media (max-width: 350px) {
+          width: 100px;
+      }
     }
 
     .social {
@@ -56,6 +60,31 @@ $red: HSLA(6, 78%, 57%, 1);
       line-height: 1em;
       font-family: $cursive;
       text-align: center;
+      white-space: pre;
+
+      @media (max-width: 800px) {
+        font-size: 10em;
+        margin-top: 14%;
+      }
+
+      @media (max-width: 750px) {
+        margin-top: 10%;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 8em;
+        margin-top: 8%;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 6em;
+        margin-top: 14%;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 5em;
+        margin-top: 20%;
+      }
     }
   }
 }
@@ -207,6 +236,20 @@ $red: HSLA(6, 78%, 57%, 1);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     transition: background-color 0.5s ease;
+
+    @media (max-width: 700px) {
+      font-size: 1.4em;
+    }
+
+    @media (max-width: 460px) {
+      font-size: 1em;
+      padding: 10px;
+    }
+
+    @media (max-width: 280px) {
+      font-size: 1em;
+      padding: 6px;
+    }
 
     &:hover {
       background-color: $red;
