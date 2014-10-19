@@ -2,25 +2,27 @@ $cursive: 'Miss Fajardose', cursive;
 
 // Hero Image
 
-.branding {
+.branding,
+.branding2,
+.branding3 {
   background-image: url('../images/header-img1.jpg');
-  background-color: black;
   background-size: 100%;
   width: 100%;
   height: 500px;
   margin-bottom: 40px;
+  position: relative;
 
   .header {
     height: 100%;
     padding: 3% 0;
+
+    img {
+      max-width: 90%;
+    }
   }
 
   h1 {
-    margin: 0;
-  }
-
-  .logo {
-    color: #fff;
+    margin: 50px 0 0 0;
   }
 
   .headline {
@@ -31,6 +33,23 @@ $cursive: 'Miss Fajardose', cursive;
     opacity: 0.8;
     position: absolute;
     top:60%;
+  }
+}
+
+.branding2 {
+  background-image: url('../images/header-img2.jpg');
+
+  .headline {
+    color: black;
+  }
+}
+
+.branding3 {
+  background-image: url('../images/header-img3.jpg');
+  color: black;
+
+  .headline {
+    color: black;
   }
 }
 
@@ -155,30 +174,53 @@ $cursive: 'Miss Fajardose', cursive;
 // Tab Header
 .tab-header {
   padding-left: 0;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid HSLA(0, 0%, 83%, 1);
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  background-color: HSLA(210, 10%, 92%, 1);
 
   li {
     display: inline-block;
     padding: 20px;
-    text-align: center;
     border: 0;
     margin-bottom: -1px;
+    text-align: center;
+    font-size: 1.8em;
+    border-radius: 0.2em;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
   }
 
   li.open {
-    border-left: 1px solid lightgrey; border-right: 1px solid lightgrey; border-top: 1px solid lightgrey;
-    border-bottom: 1px solid #fff;
+    border-left: 1px solid HSLA(0, 0%, 83%, 1);
+    border-right: 1px solid HSLA(0, 0%, 83%, 1);
+    border-top: 1px solid HSLA(0, 0%, 83%, 1);
+    border-bottom: 1px solid HSLA(200, 6%, 90%, 1);
   }
 }
 
 // Footer
-.footer {
-  height: 60px;
-  background-image: url('../images/header-img1.jpg');
-  background-color: black;
-  background-size: 100%;
-  color: #fff;
-  width: 100%;
+
+.foot {
+  max-width: 100%;
+
+  .footer {
+    clear: both;
+    height: 60px;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+
+    span {
+      font-size: 1.4em;
+    }
+  }
 }
