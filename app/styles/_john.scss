@@ -1,8 +1,7 @@
 .news {
-
-  overflow: hidden;
-  text-overflow: ellipsis;
   @include padding (0em 2% 0em 2%);
+  background-color: HSLA(207, 10%, 92%, 1);
+  overflow: scroll;
 
   li {
     list-style-type: none;
@@ -15,11 +14,9 @@
     font-weight: bold;
   }
 
-  .news_text{
-    text-overflow: ellipsis;
+  .read-more a {
+    color: black;
   }
-
-
 
 }
 
