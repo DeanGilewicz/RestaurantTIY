@@ -37,7 +37,7 @@ img {
 }
 
 h1 {
-  font-size: 12em;
+  font-size: 14em;
   font-weight: 100;
   margin: 0;
   padding: 0;
@@ -67,8 +67,6 @@ p {
   line-height: 1.4em;
 }
 
-
-
 .container {
   @include outer-container;
   $medium: new-breakpoint(max-width 750px 12);
@@ -78,16 +76,6 @@ p {
   padding: 0 20px;
   position: relative;
 
-// BRANDING
-  .logo {
-    @include span-columns(3);
-  }
-
-  .social {
-    position: absolute;
-    top: 8%;
-    right: 8%;
-  }
 
 // 3 MIDDLE MODULES
   .middle-section {
@@ -133,6 +121,10 @@ p {
 
     &:hover {
       background-color: HSLA(207, 10%, 95%, 1);
+
+      h5 {
+        background-color: $red;
+      }
     }
 
     &:hover .google {
@@ -169,6 +161,18 @@ p {
 
       div {
         margin-bottom: 20px;
+      }
+
+      &:hover {
+        background-color: HSLA(207, 10%, 95%, 1);
+
+        .open {
+          background-color: HSLA(207, 10%, 95%, 1);
+        }
+
+        h5 {
+          background-color: $red;
+        }
       }
     }
 

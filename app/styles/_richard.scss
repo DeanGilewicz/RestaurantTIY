@@ -1,6 +1,13 @@
 $cursive: 'Miss Fajardose', cursive;
+$grey: lightgrey;
+$red-50: HSLA(6, 78%, 57%, .6);
+$red: HSLA(6, 78%, 57%, 1);
 
 // Hero Image
+/* .carousel:hover .header {
+  background-color: \$red-50;
+} */
+
 .branding,
 .branding2,
 .branding3 {
@@ -17,7 +24,6 @@ $cursive: 'Miss Fajardose', cursive;
     background-size: auto 100%;
   }
 
-  background-image: url('../images/header-img1.jpg');
   background-size: 100%;
   width: 100%;
   height: 500px;
@@ -27,41 +33,43 @@ $cursive: 'Miss Fajardose', cursive;
   .header {
     height: 100%;
     width: 100%;
-    padding: 3% 0;
+    background-color: $red-50;
+
+    .container {
+      padding: 3%;
+    }
+
+    .logo {
+      width: 200px;
+      float: left;
+    }
+
+    .social {
+      float: right;
+    }
 
     h1 {
       color: white;
       display: inline-block;
-      padding: 6%;
+      width: 100%;
+      margin-top: 10%;
       line-height: 1em;
+      font-family: $cursive;
+      text-align: center;
     }
   }
+}
 
-  .headline {
-    font-family: $cursive;
-    text-align: center;
-    position: absolute;
-    top: 28%;
-    left: 0;
-    right: 0;
-  }
+.branding {
+  background-image: url('../images/header-img1.jpg');
 }
 
 .branding2 {
   background-image: url('../images/header-img2.jpg');
-
-  .header h1 {
-    color: white;
-    background-color: HSLA(207, 10%, 0%, .5);
-  }
 }
 
 .branding3 {
   background-image: url('../images/header-img3-2.jpg');
-
-  .header h1 {
-    color: white;
-  }
 }
 
 // Tab Functionality
@@ -201,7 +209,7 @@ $cursive: 'Miss Fajardose', cursive;
     transition: background-color 0.5s ease;
 
     &:hover {
-      background-color: black;
+      background-color: $red;
       color: white;
       cursor: pointer;
     }
