@@ -21,8 +21,12 @@
 
 .special {
 
-  img{
+  a {
+
+    img {
     opacity: 0.5;
+    filter: grayscale(100%);
+    }
   }
 }
 
