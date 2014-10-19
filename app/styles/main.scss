@@ -36,6 +36,8 @@ h5 {
   font-size: 1.4em;
   font-family: 'Josefin Slab', serif;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -49,8 +51,11 @@ p {
   line-height: 1.4em;
 }
 
+
+
 .container {
   @include outer-container;
+  $medium: new-breakpoint(max-width 750px 12);
   $mobile: new-breakpoint(max-width 600px 6);
   overflow: auto;
   max-width: 960px;
@@ -110,8 +115,27 @@ p {
     border: 1px solid $grey;
     height: 300px;
     margin-bottom: 40px;
-    padding: 1.6%;
+    padding: 0 1.6% 1.6% 1.6%;
+    border-radius: 0.2em;
+    background-color: HSLA(207, 10%, 92%, 1);
+
+    &:hover {
+      background-color: HSLA(207, 10%, 95%, 1);
+    }
+
+    &:hover .google {
+      filter: grayscale(0);
+    }
+
   }
+
+  .middle-section h5 {
+      margin: 0 0 18px 0;
+      padding: 4% 2% 3% 2%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+
 
 // BOTTOM
 
@@ -124,7 +148,8 @@ p {
 
     .tabs {
       @include span-columns(9 of 12);
-      padding-right: 3%;
+      background-color: HSLA(210, 10%, 92%, 1);
+
 
       @include media($mobile) {
         @include span-columns(4 of 4);
@@ -133,6 +158,21 @@ p {
       div {
         margin-bottom: 20px;
       }
+    }
+
+    .tabs > div {
+      padding: 3% 3% 5% 3%;
+      border: 1px solid HSLA(0, 0%, 83%, 1);
+      border-radius: 0.2em;
+      margin-bottom: 0;
+    }
+
+    .tabs > ul {
+      background-color: HSLA(203, 6%, 90%, 1);
+    }
+
+    .tabs li.open {
+      background-color: HSLA(210, 10%, 92%, 1);
     }
 
 

@@ -1,6 +1,5 @@
 .news {
   @include padding (0em 2% 0em 2%);
-  background-color: HSLA(207, 10%, 92%, 1);
   overflow: scroll;
 
   li {
@@ -17,8 +16,16 @@
   .read-more a {
     color: black;
   }
+}
+
+.special {
+
+  img {
+    filter: grayscale(100%);
+    }
 
 }
+
 
 .photos{
 
@@ -27,7 +34,7 @@
   font-size: 1.6em;
 
 img {
-  border: 0.1em solid black;
+  border: 1px solid HSLA(0, 0%, 83%, 1);
   border-radius: 0.18em;
   opacity: 0.5;
   -webkit-filter: grayscale(100%);
@@ -37,7 +44,7 @@ img {
 
 li:hover img{
     filter: none;
-
+    opacity: 1;
 }
 
 }
