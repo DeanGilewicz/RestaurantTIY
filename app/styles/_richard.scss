@@ -1,7 +1,6 @@
 $cursive: 'Miss Fajardose', cursive;
 
 // Hero Image
-
 .branding,
 .branding2,
 .branding3 {
@@ -27,17 +26,14 @@ $cursive: 'Miss Fajardose', cursive;
 
   .header {
     height: 100%;
+    width: 100%;
     padding: 3% 0;
 
     h1 {
       color: white;
       display: inline-block;
-      width: 100%;
-      background-color: HSLA(6, 78%, 57%, .4);;
-    }
-
-    img {
-      max-width: 90%;
+      padding: 6%;
+      line-height: 1em;
     }
   }
 
@@ -45,7 +41,7 @@ $cursive: 'Miss Fajardose', cursive;
     font-family: $cursive;
     text-align: center;
     position: absolute;
-    top:60%;
+    top: 28%;
     left: 0;
     right: 0;
   }
@@ -55,15 +51,16 @@ $cursive: 'Miss Fajardose', cursive;
   background-image: url('../images/header-img2.jpg');
 
   .header h1 {
-    color: black;
+    color: white;
+    background-color: HSLA(207, 10%, 0%, .5);
   }
 }
 
 .branding3 {
-  background-image: url('../images/header-img3.jpg');
+  background-image: url('../images/header-img3-2.jpg');
 
   .header h1 {
-    color: black;
+    color: white;
   }
 }
 
