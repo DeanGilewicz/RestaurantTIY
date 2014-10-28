@@ -9,7 +9,7 @@ var template_flickr = $('#template_photos').html();
 var render_flickr = _.template(template_flickr);
 
 var template_news = $('#news_call').html();
-var render_news = _.template(template_news);
+var render_news = Handlebars.complie(template_news);
 //var render_specialphoto = _.template($('#template_specialphoto').html());
 var news_title,
     news_text,
