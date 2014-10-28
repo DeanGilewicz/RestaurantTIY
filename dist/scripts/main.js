@@ -3,13 +3,12 @@ var api_flickr = 'https://api.flickr.com/services/rest/?&method=flickr.photos.se
 
 // Flickr API uses method photos.search, uses license key = 7-No known copyright restrictions.
 
-var api_news = 'http://private-2d011-restaurantapi.apiary-mock.com/news/latest'; //news api
-
+var api_news = 'http://private-2d011-restaurantapi.apiary-mock.com/news/latest';
 var template_flickr = $('#template_photos').html();
 var render_flickr = _.template(template_flickr);
 
 var template_news = $('#news_call').html();
-var render_news = Handlebars.complie(template_news);
+var render_news = Handlebars.compile(template_news);
 //var render_specialphoto = _.template($('#template_specialphoto').html());
 var news_title,
     news_text,
@@ -25,11 +24,6 @@ var secret;
 //This calls the news API and retrieves the content for the section.
 
     $.getJSON(api_news).done( function(news_data){
-
-          news_title = news_data.title;
-
-          news_text = news_data.post;
-//          console.log(news_text);
 
           $('.news').append(render_news(news_data));
         });
@@ -60,8 +54,6 @@ var secret;
             food_photo = 'https://farm' + farm_id +'.staticflickr.com/' + server_id + '/' + id + '_' + secret + '_m.jpg';
 
           //  console.log(food_photo);
-
-            console.log(photo.owner);
 
 
             $('.flickr').append(render_flickr(photo));
