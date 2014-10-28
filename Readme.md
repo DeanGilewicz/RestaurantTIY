@@ -1,5 +1,7 @@
 ## The Iron Yard : Group Project
 
+This project creates a fictional website for a restaurant - Fork & Spoon.
+
 The following students participated in this project.
 
 * Richard Daniel - https://GitHub.com/rdanieldesign
@@ -22,9 +24,11 @@ This project is fictional. There is no real client. Any similarity is purely a c
 
 ## Other Resources
 
-These are additional resources the team used in creating this site:
+jQuery library was used along with the bourbon and neat mix-ins. These are additional resources the team used in creating this site:
 
 Flat Icons:  http://www.flaticon.com/
 Date Picker:  jqueryul.com for calendat
 Font pictures jquery-carousel (kevin sylvestre)
 Comment Section: Disqus https://disqus.com/
+
+All images were either from creative commons, personal use or had no known copywrite or license restrictions from the flickr API. 
